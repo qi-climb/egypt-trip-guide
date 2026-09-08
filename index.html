@@ -141,6 +141,47 @@
   footer { background:var(--dark); color:rgba(255,255,255,0.7); text-align:center; padding:26px 0; font-size:0.82em; }
   footer strong { color:var(--gold); }
   @media (max-width:640px) { .hero h1{font-size:1.6em;} .split-grid{grid-template-columns:1fr;} .overview-gallery{grid-template-columns:1fr;} .day-header{flex-direction:column;align-items:flex-start;} }
+
+  /* 地图放大模态框 */
+  .map-zoom-trigger { cursor: zoom-in; position: relative; }
+  .map-zoom-trigger::after {
+    content: "🔍 点击放大查看";
+    position: absolute; top: 12px; right: 16px;
+    background: rgba(27,79,114,0.85); color: white;
+    padding: 5px 12px; border-radius: 14px; font-size: 0.78em;
+    font-weight: 600; pointer-events: none; opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+  .map-zoom-trigger:hover::after { opacity: 1; background: rgba(27,79,114,0.95); }
+  .map-modal {
+    display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.88);
+    z-index: 9999; justify-content: center; align-items: center;
+    animation: fadeIn 0.25s ease;
+  }
+  .map-modal.active { display: flex; }
+  .map-modal-content {
+    position: relative; width: 92%; max-width: 1200px;
+    max-height: 92vh; background: white; border-radius: 14px;
+    padding: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    animation: scaleIn 0.25s ease; overflow: auto;
+  }
+  .map-modal-close {
+    position: absolute; top: 12px; right: 16px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #f0f0f0; border: none; cursor: pointer;
+    font-size: 18px; color: #555; display: flex;
+    align-items: center; justify-content: center;
+    transition: all 0.2s; z-index: 10;
+  }
+  .map-modal-close:hover { background: #e07a5f; color: white; transform: rotate(90deg); }
+  .map-modal-title {
+    font-size: 1.1em; font-weight: 700; color: #1B4F72;
+    margin-bottom: 12px; padding-right: 50px;
+  }
+  .map-modal-content svg { width: 100%; height: auto; display: block; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleIn { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 </style>
 </head>
 <body>
@@ -239,7 +280,7 @@
     </div>
 
     <!-- 路线图 -->
-    <div class="map-wrapper">
+    <div class="map-wrapper map-zoom-trigger" onclick="openMapModal()">
       <svg viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
         <defs>
           <linearGradient id="landG5" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -1279,5 +1320,151 @@
   </div>
 </footer>
 
+
+  <!-- 地图放大模态框 -->
+  <div class="map-modal" id="mapModal" onclick="closeMapModal(event)">
+    <div class="map-modal-content" onclick="event.stopPropagation()">
+      <button class="map-modal-close" onclick="closeMapModal()">✕</button>
+      <div class="map-modal-title">🗺️ 埃及8天行程全景路线图（放大版）</div>
+      <svg viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="landG5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#F7ECD4"/>
+            <stop offset="100%" style="stop-color:#E8D4A0"/>
+          </linearGradient>
+          <linearGradient id="seaG5" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#B8DFF0;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#5BA3C9;stop-opacity:0.5"/>
+          </linearGradient>
+          <filter id="sh6"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.2"/></filter>
+          <marker id="aB5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="aR5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="aG5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="aBr5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="aGr5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="900" height="680" fill="#F0F4F8" rx="10"/>
+        <rect x="0" y="0" width="900" height="62" fill="url(#seaG5)"/>
+        <text x="50" y="40" font-size="14" fill="#1B4F72" font-weight="700" opacity="0.6">地中海</text>
+        <path d="M 645,55 L 725,55 L 745,200 L 735,420 L 695,620 L 645,620 L 635,480 L 640,380 L 635,280 L 625,180 L 620,100 Z" fill="url(#seaG5)" opacity="0.5"/>
+        <text x="708" y="340" font-size="13" fill="#1B4F72" font-weight="700" opacity="0.6" transform="rotate(90,708,340)">红海</text>
+        <path d="M 120,55 L 560,55 L 580,70 L 615,90 L 635,140 L 630,230 L 638,310 L 632,400 L 615,500 L 580,570 L 540,600 L 160,600 L 125,440 L 118,280 L 120,55 Z" fill="url(#landG5)" stroke="#C9A227" stroke-width="2" filter="url(#sh6)"/>
+        <!-- 尼罗河 -->
+        <path d="M 340,595 C 342,555 345,515 348,475 C 351,435 355,395 358,355 C 361,315 364,285 368,255 C 370,235 372,220 368,210" fill="none" stroke="#5DADE2" stroke-width="3.5" stroke-linecap="round" opacity="0.45"/>
+        <text x="378" y="320" font-size="10" fill="#2E86C1" font-weight="600" opacity="0.5" transform="rotate(-5,378,320)">尼罗河</text>
+        <text x="215" y="340" font-size="30" fill="#C9A227" font-weight="800" opacity="0.1" letter-spacing="8">EGYPT</text>
+
+        <!-- ===== 5条路线按时间顺序编号①②③④⑤ ===== -->
+        <!-- ① Day2 开罗→阿斯旺：向西超大弧线 -->
+        <path d="M 375,228 C 200,250 170,400 328,478" fill="none" stroke="#1B4F72" stroke-width="2.8" stroke-dasharray="9,5" marker-end="url(#aB5)" opacity="0.85"/>
+        <rect x="195" y="335" width="130" height="26" rx="13" fill="#1B4F72" opacity="0.92"/>
+        <text x="260" y="353" font-size="10.5" fill="white" font-weight="700" text-anchor="middle">①✈️ Day2 开罗→阿斯旺</text>
+
+        <!-- ② Day3 阿布辛贝一日游往返：大环形 -->
+        <path d="M 318,492 C 240,495 220,530 272,552" fill="none" stroke="#E07A5F" stroke-width="2.2" stroke-dasharray="7,4" marker-end="url(#aR5)" opacity="0.8"/>
+        <path d="M 278,556 C 340,548 360,518 328,498" fill="none" stroke="#E07A5F" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+        <rect x="175" y="520" width="155" height="24" rx="12" fill="#E07A5F" opacity="0.9"/>
+        <text x="252" y="537" font-size="10" fill="white" font-weight="700" text-anchor="middle">②🚗 Day3 阿布辛贝往返</text>
+
+        <!-- ③ Day4 阿斯旺→卢克索：向东超大弧线 -->
+        <path d="M 342,472 C 460,455 475,415 362,418" fill="none" stroke="#C9A227" stroke-width="2.8" stroke-dasharray="9,5" marker-end="url(#aG5)" opacity="0.9"/>
+        <rect x="395" y="442" width="130" height="26" rx="13" fill="#C9A227" opacity="0.95"/>
+        <text x="460" y="460" font-size="10.5" fill="white" font-weight="700" text-anchor="middle">③🚗 Day4 阿斯旺→卢克索</text>
+
+        <!-- ④ Day5 卢克索→赫尔格达：向东跨沙漠大弧线 -->
+        <path d="M 370,410 C 470,425 560,395 615,360" fill="none" stroke="#8B4513" stroke-width="2.8" stroke-dasharray="9,5" marker-end="url(#aBr5)" opacity="0.85"/>
+        <rect x="455" y="388" width="135" height="26" rx="13" fill="#8B4513" opacity="0.92"/>
+        <text x="522" y="406" font-size="10.5" fill="white" font-weight="700" text-anchor="middle">④🚗 Day5 卢克索→红海</text>
+
+        <!-- ⑤ Day7 赫尔格达→开罗：向西北回飞大弧线 -->
+        <path d="M 608,345 C 510,300 420,255 388,232" fill="none" stroke="#2E8B57" stroke-width="2.8" stroke-dasharray="9,5" marker-end="url(#aGr5)" opacity="0.85"/>
+        <rect x="445" y="268" width="135" height="26" rx="13" fill="#2E8B57" opacity="0.92"/>
+        <text x="512" y="286" font-size="10.5" fill="white" font-weight="700" text-anchor="middle">⑤✈️ Day7 红海→开罗</text>
+
+        <!-- ===== 4个主要城市标记 ===== -->
+        <!-- 开罗 -->
+        <circle cx="380" cy="215" r="16" fill="#1B4F72" stroke="white" stroke-width="4" filter="url(#sh6)"/>
+        <text x="380" y="221" font-size="13" fill="white" font-weight="800" text-anchor="middle">开</text>
+        <rect x="405" y="188" width="185" height="52" rx="10" fill="white" stroke="#1B4F72" stroke-width="2" filter="url(#sh6)"/>
+        <text x="417" y="210" font-size="16" fill="#1B4F72" font-weight="800">开罗 Cairo</text>
+        <text x="417" y="228" font-size="11" fill="#888">吉萨金字塔 · Day1-2, Day7-8</text>
+
+        <!-- 阿斯旺 -->
+        <circle cx="335" cy="485" r="16" fill="#B8860B" stroke="white" stroke-width="4" filter="url(#sh6)"/>
+        <text x="335" y="491" font-size="13" fill="white" font-weight="800" text-anchor="middle">阿</text>
+        <rect x="155" y="460" width="165" height="52" rx="10" fill="white" stroke="#B8860B" stroke-width="2" filter="url(#sh6)"/>
+        <text x="167" y="482" font-size="16" fill="#B8860B" font-weight="800">阿斯旺 Aswan</text>
+        <text x="167" y="500" font-size="11" fill="#888">菲莱神庙 · Day2-4</text>
+
+        <!-- 卢克索 -->
+        <circle cx="360" cy="412" r="16" fill="#8B4513" stroke="white" stroke-width="4" filter="url(#sh6)"/>
+        <text x="360" y="418" font-size="13" fill="white" font-weight="800" text-anchor="middle">卢</text>
+        <rect x="155" y="387" width="175" height="52" rx="10" fill="white" stroke="#8B4513" stroke-width="2" filter="url(#sh6)"/>
+        <text x="167" y="409" font-size="16" fill="#8B4513" font-weight="800">卢克索 Luxor</text>
+        <text x="167" y="427" font-size="11" fill="#888">帝王谷·卡纳克神庙 · Day4-5</text>
+
+        <!-- 赫尔格达 -->
+        <circle cx="625" cy="352" r="16" fill="#2E8B57" stroke="white" stroke-width="4" filter="url(#sh6)"/>
+        <text x="625" y="358" font-size="13" fill="white" font-weight="800" text-anchor="middle">红</text>
+        <rect x="650" y="327" width="190" height="52" rx="10" fill="white" stroke="#2E8B57" stroke-width="2" filter="url(#sh6)"/>
+        <text x="662" y="349" font-size="16" fill="#2E8B57" font-weight="800">赫尔格达 Hurghada</text>
+        <text x="662" y="367" font-size="11" fill="#888">红海浮潜·全包度假 · Day5-7</text>
+
+        <!-- ===== 阿布辛贝（景点级标记：菱形） ===== -->
+        <g transform="translate(275,555)">
+          <polygon points="0,-13 13,0 0,13 -13,0" fill="#E07A5F" stroke="white" stroke-width="2.5" filter="url(#sh6)"/>
+          <text x="0" y="5" font-size="11" fill="white" font-weight="800" text-anchor="middle">景</text>
+        </g>
+        <rect x="175" y="568" width="185" height="30" rx="8" fill="#FFF3E0" stroke="#E07A5F" stroke-width="1.5" filter="url(#sh6)"/>
+        <text x="267" y="588" font-size="12" fill="#E07A5F" font-weight="700" text-anchor="middle">阿布辛贝神庙（阿斯旺出发景点）</text>
+
+        <!-- 时间轴面板 -->
+        <rect x="28" y="78" width="180" height="200" rx="10" fill="white" stroke="#E8DCC4" stroke-width="1.2" opacity="0.95"/>
+        <text x="48" y="102" font-size="13" fill="#1B4F72" font-weight="800">📅 行程时间轴</text>
+        <text x="48" y="124" font-size="10.5" fill="#333">Day1 抵达开罗</text>
+        <text x="48" y="141" font-size="10.5" fill="#333">Day2 金字塔→飞阿斯旺</text>
+        <text x="48" y="158" font-size="10.5" fill="#333">Day3 阿布辛贝一日游</text>
+        <text x="48" y="175" font-size="10.5" fill="#333">Day4 菲莱→包车卢克索</text>
+        <text x="48" y="192" font-size="10.5" fill="#333">Day5 卢克索→包车红海</text>
+        <text x="48" y="209" font-size="10.5" fill="#333">Day6 红海全包度假</text>
+        <text x="48" y="226" font-size="10.5" fill="#333">Day7 红海→飞开罗（分流）</text>
+        <text x="48" y="243" font-size="10.5" fill="#333">Day8 离境</text>
+        <text x="48" y="265" font-size="9.5" fill="#999">4城环线 · 不走回头路</text>
+
+        <!-- 指北针 -->
+        <g transform="translate(835,615)">
+          <circle cx="0" cy="0" r="28" fill="white" stroke="#1B4F72" stroke-width="1.5" opacity="0.92" filter="url(#sh6)"/>
+          <polygon points="0,-20 5.5,0 0,4.5 -5.5,0" fill="#E07A5F"/>
+          <polygon points="0,20 5.5,0 0,-4.5 -5.5,0" fill="#1B4F72"/>
+          <text x="0" y="-23" font-size="10" fill="#1B4F72" font-weight="800" text-anchor="middle">N</text>
+        </g>
+        <!-- 比例尺 -->
+        <g transform="translate(35,625)">
+          <line x1="0" y1="0" x2="110" y2="0" stroke="#555" stroke-width="2"/>
+          <line x1="0" y1="-5" x2="0" y2="5" stroke="#555" stroke-width="2"/>
+          <line x1="55" y1="-4" x2="55" y2="4" stroke="#555" stroke-width="1.5"/>
+          <line x1="110" y1="-5" x2="110" y2="5" stroke="#555" stroke-width="2"/>
+          <text x="0" y="18" font-size="9" fill="#777">0</text>
+          <text x="46" y="18" font-size="9" fill="#777">250km</text>
+          <text x="98" y="18" font-size="9" fill="#777">500km</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <script>
+    function openMapModal() {
+      document.getElementById('mapModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMapModal(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('mapModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMapModal();
+    });
+  </script>
 </body>
 </html>
