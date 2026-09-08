@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>埃及7人定制攻略 | 招财组+天哥组 | 2026.9.29-10.6</title>
+<style>
+  :root {
+    --gold: #C9A227; --gold-light: #E8D48B; --sand: #F5EFE0; --sand-dark: #E8DCC4;
+    --nile: #1B4F72; --nile-light: #2E86C1; --coral: #E07A5F; --dark: #2C2C2C;
+    --gray: #6B6B6B; --white: #FFFFFF; --zhaocai: #1B4F72; --tiange: #B8860B;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--sand); color:var(--dark); line-height:1.7; }
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+
+  /* HERO */
+  .hero { background:linear-gradient(135deg,#1B4F72 0%,#2E86C1 50%,#C9A227 100%); color:white; padding:55px 0 45px; position:relative; overflow:hidden; }
+  .hero::before { content:"🏜️"; position:absolute; right:-20px; top:50%; transform:translateY(-50%); font-size:180px; opacity:0.1; }
+  .hero h1 { font-size:2.2em; font-weight:800; margin-bottom:6px; }
+  .hero .subtitle { font-size:1.05em; opacity:0.9; margin-bottom:20px; }
+  .hero-meta { display:flex; flex-wrap:wrap; gap:10px; }
+  .hero-meta .chip { background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.25); padding:5px 14px; border-radius:20px; font-size:0.85em; font-weight:500; }
+  .group-chips { display:flex; gap:10px; margin-top:14px; }
+  .group-chip { padding:6px 16px; border-radius:8px; font-size:0.88em; font-weight:700; }
+  .group-chip.zc { background:rgba(27,79,114,0.6); border:1px solid rgba(255,255,255,0.3); }
+  .group-chip.tg { background:rgba(184,134,11,0.6); border:1px solid rgba(255,255,255,0.3); }
+
+  section { padding:40px 0; }
+  section:nth-child(even) { background:var(--white); }
+  .section-title { font-size:1.5em; font-weight:800; color:var(--nile); margin-bottom:6px; display:flex; align-items:center; gap:10px; }
+  .section-title .icon { font-size:1.2em; }
+  .section-desc { color:var(--gray); margin-bottom:24px; font-size:0.92em; }
+
+  /* 航班 */
+  .flight-box { background:var(--white); border:1px solid var(--sand-dark); border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+  .flight-box h4 { font-size:1.05em; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .flight-box h4 .tag-zc { background:var(--zhaocai); color:white; font-size:0.75em; padding:2px 10px; border-radius:10px; }
+  .flight-box h4 .tag-tg { background:var(--tiange); color:white; font-size:0.75em; padding:2px 10px; border-radius:10px; }
+  .flight-row { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px dashed var(--sand-dark); font-size:0.86em; flex-wrap:wrap; gap:6px; }
+  .flight-row:last-child { border-bottom:none; }
+  .flight-row .route { font-weight:700; }
+  .flight-row .time { color:var(--gray); }
+  .warn-box { background:linear-gradient(135deg,#FDE8E4,#FFF5F3); border:1px solid var(--coral); border-radius:10px; padding:14px 18px; margin:14px 0; font-size:0.88em; }
+  .warn-box strong { color:#C0392B; }
+  .tip-box { background:linear-gradient(135deg,#E8F4FD,#F0F8FF); border:1px solid var(--nile-light); border-radius:10px; padding:14px 18px; margin:14px 0; font-size:0.88em; }
+  .tip-box strong { color:var(--nile); }
+
+  /* 总览 */
+  .overview-hero { background:linear-gradient(135deg,var(--nile),var(--nile-light)); color:white; border-radius:14px; padding:24px 28px; margin-bottom:18px; }
+  .overview-hero h3 { font-size:1.2em; font-weight:700; margin-bottom:8px; }
+  .overview-hero p { font-size:0.9em; opacity:0.9; line-height:1.7; }
+  .overview-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin-bottom:24px; }
+  .stat-item { background:var(--white); border:1px solid var(--sand-dark); border-radius:10px; padding:14px 10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+  .stat-num { font-size:1.15em; font-weight:800; color:var(--nile); }
+  .stat-label { font-size:0.75em; color:var(--gray); margin-top:3px; }
+  .overview-gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:24px; }
+  .gallery-item { position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.1); aspect-ratio:3/2; }
+  .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s; }
+  .gallery-item:hover img { transform:scale(1.05); }
+  .gallery-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.75)); color:white; padding:22px 14px 10px; }
+  .gallery-caption strong { display:block; font-size:0.95em; margin-bottom:1px; }
+  .gallery-caption span { font-size:0.75em; opacity:0.85; }
+
+  /* 地图 */
+  .map-wrapper { background:var(--white); border:1px solid var(--sand-dark); border-radius:12px; padding:16px; box-shadow:0 2px 12px rgba(0,0,0,0.05); overflow-x:auto; margin-bottom:20px; }
+  .map-wrapper svg { width:100%; height:auto; display:block; }
+  .map-legend { display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; padding-top:12px; border-top:1px dashed var(--sand-dark); font-size:0.82em; color:var(--gray); }
+  .map-legend .legend-item { display:flex; align-items:center; gap:6px; }
+  .map-legend .legend-dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+  .map-legend .legend-line { width:26px; height:0; border-top:3px dashed; flex-shrink:0; }
+
+  /* 速览表 */
+  .overview-days { overflow-x:auto; }
+  .overview-days table { width:100%; border-collapse:collapse; font-size:0.85em; }
+  .overview-days th { background:var(--nile); color:white; padding:9px 10px; text-align:left; font-weight:600; white-space:nowrap; }
+  .overview-days td { padding:8px 10px; border-bottom:1px solid var(--sand-dark); vertical-align:top; }
+  .overview-days tr:nth-child(even) td { background:#FAFAFA; }
+  .day-badge { display:inline-block; background:var(--gold-light); color:#7A5C00; font-weight:700; padding:2px 8px; border-radius:8px; font-size:0.82em; }
+  .city-tag { display:inline-block; padding:1px 8px; border-radius:8px; font-size:0.78em; font-weight:600; }
+  .city-cairo { background:#E8F4FD; color:var(--nile); }
+  .city-aswan { background:#FFF4D6; color:#B8860B; }
+  .city-luxor { background:#F5E6D3; color:#8B4513; }
+  .city-redsea { background:#FDE8E4; color:#C0392B; }
+
+  /* 每日行程 */
+  .timeline { position:relative; padding-left:34px; }
+  .timeline::before { content:""; position:absolute; left:13px; top:0; bottom:0; width:3px; background:linear-gradient(to bottom,var(--gold),var(--nile-light)); border-radius:2px; }
+  .day-block { position:relative; margin-bottom:24px; background:var(--white); border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+  .day-block::before { content:""; position:absolute; left:-29px; top:20px; width:13px; height:13px; background:var(--gold); border:3px solid var(--white); border-radius:50%; box-shadow:0 0 0 2px var(--gold); z-index:1; }
+  .day-header { background:linear-gradient(135deg,var(--nile),var(--nile-light)); color:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+  .day-header .day-num { font-size:1.15em; font-weight:800; }
+  .day-header .day-date { font-size:0.82em; opacity:0.85; margin-left:8px; }
+  .day-header .day-theme { background:rgba(255,255,255,0.2); padding:3px 12px; border-radius:12px; font-size:0.8em; font-weight:600; }
+  .day-city { background:rgba(255,255,255,0.25); padding:3px 12px; border-radius:12px; font-size:0.8em; font-weight:600; margin-left:6px; }
+  .day-body { padding:16px 20px; }
+  .schedule-row { display:flex; gap:12px; padding:7px 0; border-bottom:1px dashed var(--sand-dark); align-items:flex-start; }
+  .schedule-row:last-child { border-bottom:none; }
+  .schedule-time { min-width:58px; font-weight:700; color:var(--nile); font-size:0.84em; padding-top:2px; }
+  .schedule-content { flex:1; font-size:0.88em; }
+  .schedule-content .spot { font-weight:700; }
+  .schedule-content .note { color:var(--gray); font-size:0.82em; }
+  .tag { display:inline-block; font-size:0.7em; padding:1px 7px; border-radius:8px; font-weight:600; margin-left:5px; vertical-align:middle; }
+  .tag-must { background:#FDE8E4; color:var(--coral); }
+  .tag-opt { background:#E8F4FD; color:var(--nile-light); }
+  .tag-tip { background:#FFF4D6; color:#B8860B; }
+  .tag-zc { background:#E8F4FD; color:var(--nile); }
+  .tag-tg { background:#FFF4D6; color:#B8860B; }
+  .day-stay { margin-top:10px; padding:7px 12px; background:var(--sand); border-radius:8px; font-size:0.82em; color:var(--gray); }
+  .day-stay strong { color:var(--nile); }
+  .split-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  .split-group { border-radius:10px; padding:12px 14px; }
+  .split-group.zc { background:#E8F4FD; border:1px solid #B8DAF0; }
+  .split-group.tg { background:#FFF8E6; border:1px solid #E8D48B; }
+  .split-group h5 { font-size:0.9em; margin-bottom:6px; }
+  .split-group.zc h5 { color:var(--nile); }
+  .split-group.tg h5 { color:#B8860B; }
+  .split-group ul { list-style:none; font-size:0.82em; }
+  .split-group li { padding:2px 0; color:var(--gray); }
+  .split-group li::before { content:"▸ "; font-weight:700; }
+
+  /* 通用表格 */
+  .info-table { width:100%; border-collapse:collapse; font-size:0.86em; margin-top:8px; }
+  .info-table th { background:var(--nile); color:white; padding:9px 12px; text-align:left; font-weight:600; }
+  .info-table td { padding:9px 12px; border-bottom:1px solid var(--sand-dark); }
+  .info-table tr:nth-child(even) td { background:#FAFAFA; }
+  .info-table .price { color:var(--coral); font-weight:700; }
+
+  /* 防骗秘籍 */
+  .scam-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+  .scam-card { background:var(--white); border:1px solid var(--sand-dark); border-left:4px solid var(--coral); border-radius:0 10px 10px 0; padding:16px 18px; }
+  .scam-card h4 { color:var(--coral); font-size:0.98em; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+  .scam-card .scam-desc { font-size:0.84em; color:var(--gray); margin-bottom:8px; }
+  .scam-card .scam-defense { font-size:0.84em; color:var(--dark); background:#F0FFF0; padding:8px 12px; border-radius:6px; border-left:3px solid #4CAF50; }
+  .scam-card .scam-defense strong { color:#2E7D32; }
+
+  .budget-total { background:linear-gradient(135deg,var(--nile),var(--nile-light)); color:white; border-radius:12px; padding:22px; text-align:center; margin-bottom:18px; }
+  .budget-total .amount { font-size:2.2em; font-weight:800; }
+  .budget-total .label { font-size:0.88em; opacity:0.85; margin-top:4px; }
+
+  footer { background:var(--dark); color:rgba(255,255,255,0.7); text-align:center; padding:26px 0; font-size:0.82em; }
+  footer strong { color:var(--gold); }
+  @media (max-width:640px) { .hero h1{font-size:1.6em;} .split-grid{grid-template-columns:1fr;} .overview-gallery{grid-template-columns:1fr;} .day-header{flex-direction:column;align-items:flex-start;} }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <h1>🇪🇬 埃及7人定制攻略</h1>
+    <div class="subtitle">开罗 · 阿斯旺 · 阿布辛贝 · 卢克索 · 赫尔格达 — 一次走遍古埃及文明符号</div>
+    <div class="hero-meta">
+      <span class="chip">📅 2026.9.29 — 10.6</span>
+      <span class="chip">👥 7人两队</span>
+      <span class="chip">✈️ 开罗进出</span>
+      <span class="chip">🗺️ 5城环线</span>
+      <span class="chip">💰 人均约¥1.3-1.6万</span>
+    </div>
+    <div class="group-chips">
+      <span class="group-chip zc">🔵 招财组 3人 — 10/5 18:15先飞开罗，00:40国际返程</span>
+      <span class="group-chip tg">🟡 天哥组 4人 — 10/5 23:00飞开罗，10/6 13:00国际返程</span>
+    </div>
+  </div>
+</div>
+
+<!-- 航班信息核对 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">✈️</span> 航班信息核对（全部已确认）</div>
+    <div class="section-desc">所有行程围绕以下航班时间安排，请务必核对无误。</div>
+
+    <div class="flight-box">
+      <h4>🔵 招财组（3人）— 国际+内陆全程 <span class="tag-zc">招财组</span></h4>
+      <div class="flight-row"><span class="route">国际去程：上海PVG → 开罗CAI T1</span><span class="time">9/28 08:20出发 → 9/29 10:45到达（经曼谷、沙迦）</span></div>
+      <div class="flight-row"><span class="route">国际返程：开罗CAI T2 → 上海PVG</span><span class="time">10/6 00:40出发 → 10/7 06:20到达（经多哈、新加坡）</span></div>
+      <div class="flight-row"><span class="route">内陆去程：开罗CAI T3 → 阿斯旺ASW</span><span class="time">9/30 23:20 埃及航空MS80 → 10/1 00:40到达（1h20m，托运23kg）</span></div>
+      <div class="flight-row"><span class="route">内陆返程：赫尔格达HRG T2 → 开罗CAI T3</span><span class="time">10/5 18:15 开罗航空SM025 → 19:45到达（1h30m，小食）</span></div>
+      <div class="flight-row" style="color:var(--coral);font-weight:600;"><span>⚠ 招财组内陆票为飞猪组合¥2098/人，显示"剩2张"，3人需尽快锁票或分开下单</span></div>
+    </div>
+
+    <div class="flight-box">
+      <h4>🟡 天哥组（4人）— 国际+内陆全程 <span class="tag-tg">天哥组</span></h4>
+      <div class="flight-row"><span class="route">国际去程：上海PVG → 开罗CAI T2</span><span class="time">9/28 18:00出发 → 9/29 12:10到达（经吉隆坡、多哈）</span></div>
+      <div class="flight-row"><span class="route">国际返程：开罗CAI → 上海PVG</span><span class="time">10/6 13:00出发 → 10/8 01:55到达（经多哈、吉隆坡）</span></div>
+      <div class="flight-row"><span class="route">内陆去程：开罗CAI T3 → 阿斯旺ASW</span><span class="time">9/30 23:20 埃及航空MS80 → 10/1 00:40到达（和招财组同班）</span></div>
+      <div class="flight-row"><span class="route">内陆返程：赫尔格达HRG → 开罗CAI</span><span class="time">10/5 23:00起飞 → 10/6 00:30到达（已出票）</span></div>
+    </div>
+
+    <div class="tip-box">
+      <strong>汇合方案：</strong>9/29招财组10:45到T1，天哥组12:10到T2，相差1h25m。招财组先到后在T2到达大厅等候（T1↔T2有免费接驳车约10分钟），两队汇合后一起出发去酒店。若天哥组延误，招财组先去酒店办理入住，天哥组随后打车汇合。
+    </div>
+
+    <div class="warn-box">
+      <strong>🔑 10/5 关键分流（已确认最优方案）：</strong><br>
+      • <strong>招财组</strong>：18:15赫尔格达飞开罗，19:45到T3 → 取行李转T2 → 机场吃晚餐休息 → 21:40开始国际值机 → 00:40起飞。<strong>不住机场酒店、不付费休息室</strong>，5小时转机时间充裕，省一晚酒店钱。<br>
+      • <strong>天哥组</strong>：继续享受全包酒店到晚上 → 23:00飞开罗 → 00:30到 → 入住机场酒店Le Méridien休息 → 10/6 13:00国际起飞。按天哥组原计划执行。
+    </div>
+  </div>
+</section>
+
+<!-- 行程总览 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">👁️</span> 行程总览</div>
+    <div class="section-desc">一张图看懂全程：路线、景点、节奏，一目了然。</div>
+
+    <div class="overview-hero">
+      <h3>8天7晚 · 5城环线 · 开罗→阿斯旺→阿布辛贝→卢克索→红海→开罗</h3>
+      <p>北上南下再东出，不走回头路。前半段深度文明探秘（金字塔+阿布辛贝+帝王谷），后半段红海全包度假恢复体力。9/30两队同机飞阿斯旺，10/5分流：招财组18:15先飞开罗直接转国际返程（不住酒店），天哥组23:00飞开罗住机场酒店。节奏张弛有度，不凌晨5点起床。</p>
+    </div>
+
+    <div class="overview-stats">
+      <div class="stat-item"><div class="stat-num">8天7晚</div><div class="stat-label">9.29 — 10.6</div></div>
+      <div class="stat-item"><div class="stat-num">7人</div><div class="stat-label">招财3+天哥4</div></div>
+      <div class="stat-item"><div class="stat-num">5城</div><div class="stat-label">开罗·阿斯旺·阿布辛贝·卢克索·红海</div></div>
+      <div class="stat-item"><div class="stat-num">2段内陆机</div><div class="stat-label">开罗↔阿斯旺 + 红海→开罗</div></div>
+      <div class="stat-item"><div class="stat-num">3段包车</div><div class="stat-label">阿布辛贝往返+阿斯旺→卢克索+卢克索→红海</div></div>
+      <div class="stat-item"><div class="stat-num">¥1.3-1.6万</div><div class="stat-label">人均总预算（含机票）</div></div>
+    </div>
+
+    <div class="overview-gallery">
+      <div class="gallery-item">
+        <img src="https://aka.doubaocdn.com/s/r4ZNoqOUCI" alt="吉萨金字塔群">
+        <div class="gallery-caption"><strong>开罗 · 吉萨金字塔群</strong><span>Day2 · 世界七大奇迹 · 胡夫金字塔+狮身人面像</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://aka.doubaocdn.com/s/52uo9yIKxX" alt="阿布辛贝神庙">
+        <div class="gallery-caption"><strong>阿斯旺 · 阿布辛贝神庙</strong><span>Day3 · 拉美西斯二世巨像 · 埃及最震撼神庙</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://aka.doubaocdn.com/s/sheK2Nhd8s" alt="卡纳克神庙">
+        <div class="gallery-caption"><strong>卢克索 · 卡纳克神庙</strong><span>Day5 · 古埃及最大神庙群 · 134根巨柱多柱厅</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://aka.doubaocdn.com/s/Sdb0dXc1Fj" alt="红海赫尔格达">
+        <div class="gallery-caption"><strong>赫尔格达 · 红海</strong><span>Day6-7 · 全球顶级浮潜 · 全包度假酒店</span></div>
+      </div>
+    </div>
+
+    <!-- 路线图 -->
+    <div class="map-wrapper">
+      <svg viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="landG2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#F7ECD4"/>
+            <stop offset="100%" style="stop-color:#E8D4A0"/>
+          </linearGradient>
+          <linearGradient id="seaG2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#B8DFF0;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#5BA3C9;stop-opacity:0.5"/>
+          </linearGradient>
+          <filter id="sh3"><feDropShadow dx="1" dy="1.5" stdDeviation="1.5" flood-opacity="0.2"/></filter>
+          <marker id="aB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#1B4F72"/></marker>
+          <marker id="aG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#C9A227"/></marker>
+          <marker id="aR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#E07A5F"/></marker>
+          <marker id="aBr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#8B4513"/></marker>
+          <marker id="aGr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="900" height="680" fill="#F0F4F8" rx="10"/>
+        <rect x="0" y="0" width="900" height="62" fill="url(#seaG2)"/>
+        <text x="50" y="40" font-size="14" fill="#1B4F72" font-weight="700" opacity="0.65">地中海</text>
+        <path d="M 645,55 L 725,55 L 745,200 L 735,420 L 695,620 L 645,620 L 635,480 L 640,380 L 635,280 L 625,180 L 620,100 Z" fill="url(#seaG2)" opacity="0.55"/>
+        <text x="705" y="340" font-size="13" fill="#1B4F72" font-weight="700" opacity="0.65" transform="rotate(90,705,340)">红海</text>
+        <path d="M 120,55 L 560,55 L 580,70 L 615,90 L 635,140 L 630,230 L 638,310 L 632,400 L 615,500 L 580,570 L 540,600 L 160,600 L 125,440 L 118,280 L 120,55 Z" fill="url(#landG2)" stroke="#C9A227" stroke-width="2" filter="url(#sh3)"/>
+        <path d="M 315,595 C 318,555 322,515 326,475 C 330,435 336,395 344,355 C 350,315 356,285 364,255 C 368,235 370,220 366,210 C 362,200 352,190 338,175" fill="none" stroke="#2E86C1" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+        <text x="215" y="340" font-size="30" fill="#C9A227" font-weight="800" opacity="0.12" letter-spacing="8">EGYPT</text>
+
+        <!-- 顺时针环线：5段曲线，按时间顺序 -->
+        <!-- ① Day2 开罗→阿斯旺（向南大弧线） -->
+        <path d="M 372,228 C 358,305 348,400 336,472" fill="none" stroke="#1B4F72" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#aB)" opacity="0.8"/>
+        <text x="318" y="355" font-size="10" fill="#1B4F72" font-weight="700" opacity="0.85">①✈️ Day2</text>
+
+        <!-- ② Day3 阿斯旺↔阿布辛贝（西南往返小弧线） -->
+        <path d="M 322,500 C 312,522 298,545 287,558" fill="none" stroke="#E07A5F" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#aR)" opacity="0.8"/>
+        <path d="M 287,558 C 298,545 312,522 322,500" fill="none" stroke="#E07A5F" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.4"/>
+        <text x="245" y="535" font-size="10" fill="#E07A5F" font-weight="700" opacity="0.85">②🚗 Day3</text>
+
+        <!-- ③ Day4 阿斯旺→卢克索（向北短弧线） -->
+        <path d="M 338,472 C 340,458 344,440 348,428" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#aG)" opacity="0.85"/>
+        <text x="358" y="458" font-size="10" fill="#B8860B" font-weight="700" opacity="0.85">③🚗 Day4</text>
+
+        <!-- ④ Day5 卢克索→赫尔格达（向东跨沙漠大弧线） -->
+        <path d="M 362,415 C 445,402 535,382 612,360" fill="none" stroke="#8B4513" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#aBr)" opacity="0.8"/>
+        <text x="455" y="395" font-size="10" fill="#8B4513" font-weight="700" opacity="0.85">④🚗 Day5</text>
+
+        <!-- ⑤ Day7 赫尔格达→开罗（向西北回飞大弧线） -->
+        <path d="M 608,342 C 530,298 450,258 388,230" fill="none" stroke="#2E8B57" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#aGr)" opacity="0.8"/>
+        <text x="460" y="275" font-size="10" fill="#2E8B57" font-weight="700" opacity="0.85">⑤✈️ Day7</text>
+
+        <!-- 城市标记 -->
+        <circle cx="370" cy="210" r="11" fill="#1B4F72" stroke="white" stroke-width="3" filter="url(#sh3)"/>
+        <text x="370" y="214" font-size="11" fill="white" font-weight="800" text-anchor="middle">开</text>
+        <rect x="388" y="188" width="170" height="46" rx="7" fill="white" stroke="#1B4F72" stroke-width="1.5" filter="url(#sh3)"/>
+        <text x="398" y="206" font-size="14" fill="#1B4F72" font-weight="800">开罗 Cairo</text>
+        <text x="398" y="222" font-size="10" fill="#666">🏛️ 金字塔 · Day1-2,7-8</text>
+
+        <circle cx="330" cy="490" r="11" fill="#B8860B" stroke="white" stroke-width="3" filter="url(#sh3)"/>
+        <text x="330" y="494" font-size="11" fill="white" font-weight="800" text-anchor="middle">阿</text>
+        <rect x="168" y="468" width="148" height="46" rx="7" fill="white" stroke="#B8860B" stroke-width="1.5" filter="url(#sh3)"/>
+        <text x="178" y="486" font-size="14" fill="#B8860B" font-weight="800">阿斯旺 Aswan</text>
+        <text x="178" y="502" font-size="10" fill="#666">🏺 菲莱神庙 · Day2-4</text>
+
+        <circle cx="280" cy="565" r="10" fill="#E07A5F" stroke="white" stroke-width="2.5" filter="url(#sh3)"/>
+        <text x="280" y="569" font-size="10" fill="white" font-weight="800" text-anchor="middle">布</text>
+        <rect x="128" y="575" width="158" height="28" rx="7" fill="white" stroke="#E07A5F" stroke-width="1.2" filter="url(#sh3)"/>
+        <text x="138" y="593" font-size="12" fill="#E07A5F" font-weight="700">阿布辛贝 · Day3</text>
+
+        <circle cx="350" cy="420" r="11" fill="#8B4513" stroke="white" stroke-width="3" filter="url(#sh3)"/>
+        <text x="350" y="424" font-size="11" fill="white" font-weight="800" text-anchor="middle">卢</text>
+        <rect x="168" y="398" width="162" height="46" rx="7" fill="white" stroke="#8B4513" stroke-width="1.5" filter="url(#sh3)"/>
+        <text x="178" y="416" font-size="14" fill="#8B4513" font-weight="800">卢克索 Luxor</text>
+        <text x="178" y="432" font-size="10" fill="#666">🏛️ 帝王谷·卡纳克 · Day4-5</text>
+
+        <circle cx="625" cy="350" r="11" fill="#2E8B57" stroke="white" stroke-width="3" filter="url(#sh3)"/>
+        <text x="625" y="354" font-size="11" fill="white" font-weight="800" text-anchor="middle">红</text>
+        <rect x="643" y="328" width="172" height="46" rx="7" fill="white" stroke="#2E8B57" stroke-width="1.5" filter="url(#sh3)"/>
+        <text x="653" y="346" font-size="14" fill="#2E8B57" font-weight="800">赫尔格达 Hurghada</text>
+        <text x="653" y="362" font-size="10" fill="#666">🏖️ 红海浮潜 · Day5-7</text>
+
+        <!-- 时间轴面板 -->
+        <rect x="28" y="78" width="178" height="198" rx="9" fill="white" stroke="#E8DCC4" stroke-width="1.2" opacity="0.94"/>
+        <text x="46" y="101" font-size="13" fill="#1B4F72" font-weight="800">📅 行程时间轴</text>
+        <text x="46" y="122" font-size="10.5" fill="#333">Day1 抵达开罗</text>
+        <text x="46" y="139" font-size="10.5" fill="#333">Day2 金字塔→飞阿斯旺</text>
+        <text x="46" y="156" font-size="10.5" fill="#333">Day3 阿布辛贝往返</text>
+        <text x="46" y="173" font-size="10.5" fill="#333">Day4 菲莱→包车卢克索</text>
+        <text x="46" y="190" font-size="10.5" fill="#333">Day5 卢克索→包车红海</text>
+        <text x="46" y="207" font-size="10.5" fill="#333">Day6 红海全包度假</text>
+        <text x="46" y="224" font-size="10.5" fill="#333">Day7 红海→飞开罗（分流）</text>
+        <text x="46" y="241" font-size="10.5" fill="#333">Day8 离境</text>
+        <text x="46" y="262" font-size="9.5" fill="#999">顺时针环线 · 不走回头路</text>
+
+        <!-- 指北针 -->
+        <g transform="translate(835,615)">
+          <circle cx="0" cy="0" r="26" fill="white" stroke="#1B4F72" stroke-width="1.5" opacity="0.92" filter="url(#sh3)"/>
+          <polygon points="0,-19 5,0 0,4 -5,0" fill="#E07A5F"/>
+          <polygon points="0,19 5,0 0,-4 -5,0" fill="#1B4F72"/>
+          <text x="0" y="-22" font-size="10" fill="#1B4F72" font-weight="800" text-anchor="middle">N</text>
+        </g>
+        <!-- 比例尺 -->
+        <g transform="translate(35,625)">
+          <line x1="0" y1="0" x2="110" y2="0" stroke="#555" stroke-width="2"/>
+          <line x1="0" y1="-5" x2="0" y2="5" stroke="#555" stroke-width="2"/>
+          <line x1="55" y1="-4" x2="55" y2="4" stroke="#555" stroke-width="1.5"/>
+          <line x1="110" y1="-5" x2="110" y2="5" stroke="#555" stroke-width="2"/>
+          <text x="0" y="18" font-size="9" fill="#777">0</text>
+          <text x="46" y="18" font-size="9" fill="#777">250km</text>
+          <text x="98" y="18" font-size="9" fill="#777">500km</text>
+        </g>
+      </svg>
+      <div class="map-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#1B4F72;"></span>开罗（Day1-2,7-8）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#B8860B;"></span>阿斯旺（Day2-4）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E07A5F;"></span>阿布辛贝（Day3）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#8B4513;"></span>卢克索（Day4-5）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2E8B57;"></span>赫尔格达（Day5-7）</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#1B4F72;"></span>内陆飞机</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#C9A227;"></span>长途包车</div>
+      </div>
+    </div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E07A5F;"></span>阿布辛贝（Day3）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#8B4513;"></span>卢克索（Day4-5）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2E8B57;"></span>赫尔格达（Day5-7）</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#1B4F72;"></span>内陆飞机</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#C9A227;"></span>长途包车</div>
+      </div>
+    </div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E07A5F;"></span>阿布辛贝（当日往返）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#8B4513;"></span>卢克索（1晚）</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2E8B57;"></span>赫尔格达（2晚）</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#1B4F72;"></span>内陆飞机</div>
+        <div class="legend-item"><span class="legend-line" style="border-color:#C9A227;"></span>长途包车</div>
+      </div>
+    </div>
+
+    <!-- 8天速览表 -->
+    <div class="overview-days">
+      <table>
+        <thead><tr><th>Day</th><th>日期</th><th>城市</th><th>主题</th><th>核心安排</th><th>住宿</th></tr></thead>
+        <tbody>
+          <tr><td><span class="day-badge">D1</span></td><td>9/29 周二</td><td><span class="city-tag city-cairo">开罗</span></td><td>抵达汇合</td><td>两队机场汇合 → 萨拉丁城堡+阿里清真寺 → 哈利利市场+晚餐</td><td>开罗</td></tr>
+          <tr><td><span class="day-badge">D2</span></td><td>9/30 周三</td><td><span class="city-tag city-cairo">开罗</span>→<span class="city-tag city-aswan">阿斯旺</span></td><td>金字塔+GEM+夜飞</td><td>吉萨金字塔群 → 大埃及博物馆GEM → 23:20同机飞阿斯旺</td><td>阿斯旺</td></tr>
+          <tr><td><span class="day-badge">D3</span></td><td>10/1 周四</td><td><span class="city-tag city-aswan">阿斯旺</span></td><td>阿布辛贝+日落</td><td>07:00包车去阿布辛贝（280km）→ 两座神庙深度游 → 返回 → Felucca日落帆船</td><td>阿斯旺</td></tr>
+          <tr><td><span class="day-badge">D4</span></td><td>10/2 周五</td><td><span class="city-tag city-aswan">阿斯旺</span>→<span class="city-tag city-luxor">卢克索</span></td><td>菲莱神庙+转场</td><td>菲莱神庙（小岛）→ 包车3.5-4.5h去卢克索 → 卢克索神庙夜游</td><td>卢克索</td></tr>
+          <tr><td><span class="day-badge">D5</span></td><td>10/3 周六</td><td><span class="city-tag city-luxor">卢克索</span>→<span class="city-tag city-redsea">赫尔格达</span></td><td>卢克索精华+转场</td><td>帝王谷 → 哈特谢普苏特神庙 → 卡纳克神庙 → 包车4.5-5h去红海</td><td>赫尔格达</td></tr>
+          <tr><td><span class="day-badge">D6</span></td><td>10/4 周日</td><td><span class="city-tag city-redsea">赫尔格达</span></td><td>红海全包度假</td><td>自然醒 → 海滩/泳池/浮潜/SPA → 可选3-4h私人浮潜船 → 全包晚餐</td><td>赫尔格达</td></tr>
+          <tr><td><span class="day-badge">D7</span></td><td>10/5 周一</td><td><span class="city-tag city-redsea">赫尔格达</span>→开罗</td><td>分流日 ⚠️</td><td>两队共享上午红海 → <strong>招财组18:15飞开罗（不住酒店，机场转国际00:40飞）</strong> → <strong>天哥组23:00飞开罗（住机场酒店）</strong></td><td>招财飞/天哥住机场</td></tr>
+          <tr><td><span class="day-badge">D8</span></td><td>10/6 周二</td><td><span class="city-tag city-cairo">开罗</span></td><td>天哥组返程</td><td>招财组00:40已在飞 → 天哥组机场酒店早餐 → 10:00到航站楼 → 13:00起飞</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 每日行程 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🗓️</span> 每日行程详表</div>
+    <div class="section-desc">按天拆解，精确到小时。标注必去/可选/贴士，灵活调整。</div>
+
+    <div class="timeline">
+
+      <!-- DAY 1 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 1</span><span class="day-date">9月29日 周二</span></div>
+          <div><span class="day-theme">抵达开罗 · 两队汇合</span><span class="day-city">📍 开罗</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day1</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">9/29</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">抵达开罗 · 机场→酒店</text>
+        
+        <!-- 开罗区域简化图 -->
+        <rect x="30" y="40" width="360" height="100" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="200" y="135" font-size="9" fill="#AAA" text-anchor="middle">开 罗 市 区</text>
+        <!-- 尼罗河 -->
+        <path d="M 180,40 C 185,65 182,90 188,140" fill="none" stroke="#5DADE2" stroke-width="3" opacity="0.4"/>
+        <!-- 机场（东北） -->
+        <circle cx="350" cy="60" r="8" fill="#888" stroke="white" stroke-width="2"/>
+        <text x="350" y="64" font-size="9" fill="white" font-weight="700" text-anchor="middle">✈</text>
+        <text x="350" y="82" font-size="9" fill="#555" text-anchor="middle">开罗机场</text>
+        <!-- 酒店（市区中部，解放广场附近） -->
+        <circle cx="170" cy="85" r="8" fill="#1B4F72" stroke="white" stroke-width="2"/>
+        <text x="170" y="89" font-size="9" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="170" y="107" font-size="9" fill="#1B4F72" font-weight="600" text-anchor="middle">市区酒店</text>
+        <!-- 路线：机场→酒店 -->
+        <path d="M 340,65 C 300,72 240,78 180,85" fill="none" stroke="#1B4F72" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#ma1)"/>
+        <text x="255" y="68" font-size="8.5" fill="#1B4F72">🚗 接机40min</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">10:45</span><div class="schedule-content"><span class="spot">招财组到达开罗T1</span><span class="tag tag-zc">招财组</span><br><span class="note">落地签/电子签通关，取行李后乘接驳车去T2到达大厅等候天哥组</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">12:10</span><div class="schedule-content"><span class="spot">天哥组到达开罗T2</span><span class="tag tag-tg">天哥组</span><br><span class="note">7人集合完毕，提前约好的7-9座商务车接机</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">13:30</span><div class="schedule-content"><span class="spot">出发去萨拉丁城堡</span><br><span class="note">机场到城堡约35-70分钟（高峰可能更久）。若14:15仍未离开机场，取消当天清真寺，直接入住</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">15:10</span><div class="schedule-content"><span class="spot">穆罕默德·阿里清真寺+观景台</span> <span class="tag tag-must">必去</span><br><span class="note">城堡内，官方末入16:00。雪花石清真寺，开罗全城最佳观景点。女性需带头巾（门口可借）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">16:30</span><div class="schedule-content"><span class="spot">前往酒店入住休息</span><br><span class="note">推荐The St. Regis Cairo（中心位置、安保好）或Marriott Mena House（金字塔景观）。7人需3-4间房</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">19:00</span><div class="schedule-content"><span class="spot">Muizz街+哈利利市场+晚餐</span> <span class="tag tag-opt">轻松逛</span><br><span class="note">开罗最古老的伊斯兰街道+集市，感受老城氛围。吃埃及国菜Koshari（约30-50埃镑/人）。买伴手礼从1/3价格开始砍</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">21:30</span><div class="schedule-content"><span class="spot">回酒店休息</span><br><span class="note">明天7点出发去金字塔，早睡</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>开罗（The St. Regis / Marriott Mena House） 🍽️ <strong>含：</strong>午、晚餐</div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 2</span><span class="day-date">9月30日 周三</span></div>
+          <div><span class="day-theme">金字塔+GEM+夜飞阿斯旺</span><span class="day-city">📍 开罗→阿斯旺</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day2</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">9/30</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">金字塔→夜飞阿斯旺</text>
+        
+        <!-- 开罗+吉萨区域 -->
+        <rect x="25" y="38" width="280" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="165" y="138" font-size="9" fill="#AAA" text-anchor="middle">开罗 / 吉萨</text>
+        <path d="M 140,38 C 145,65 142,95 148,143" fill="none" stroke="#5DADE2" stroke-width="3" opacity="0.4"/>
+        <!-- 酒店 -->
+        <circle cx="130" cy="80" r="7" fill="#1B4F72" stroke="white" stroke-width="2"/>
+        <text x="130" y="84" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="130" y="98" font-size="8.5" fill="#1B4F72" text-anchor="middle">酒店</text>
+        <!-- 吉萨金字塔（西南） -->
+        <circle cx="60" cy="105" r="8" fill="#C9A227" stroke="white" stroke-width="2"/>
+        <text x="60" y="109" font-size="8" fill="white" font-weight="700" text-anchor="middle">🔺</text>
+        <text x="60" y="123" font-size="8.5" fill="#B8860B" text-anchor="middle">吉萨金字塔</text>
+        <!-- 开罗机场（东北） -->
+        <circle cx="270" cy="58" r="7" fill="#888" stroke="white" stroke-width="2"/>
+        <text x="270" y="62" font-size="8" fill="white" font-weight="700" text-anchor="middle">✈</text>
+        <text x="270" y="76" font-size="8.5" fill="#555" text-anchor="middle">开罗机场</text>
+        <!-- 路线1：酒店→金字塔 -->
+        <path d="M 122,84 C 100,92 80,98 68,103" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma2)"/>
+        <text x="80" y="88" font-size="8" fill="#B8860B">🚗30min</text>
+        <!-- 路线2：金字塔→机场 -->
+        <path d="M 68,100 C 140,80 210,68 262,60" fill="none" stroke="#8B4513" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma4)"/>
+        <text x="160" y="72" font-size="8" fill="#8B4513">🚗50min</text>
+        <!-- 飞阿斯旺标注 -->
+        <rect x="315" y="55" width="95" height="50" rx="6" fill="#FFF3E0" stroke="#E07A5F" stroke-width="1"/>
+        <text x="362" y="75" font-size="9" fill="#E07A5F" font-weight="700" text-anchor="middle">✈️ 23:20</text>
+        <text x="362" y="90" font-size="8.5" fill="#666" text-anchor="middle">开罗→阿斯旺</text>
+        <text x="362" y="102" font-size="8" fill="#999" text-anchor="middle">MS80 · 1h20m</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">07:00</span><div class="schedule-content"><span class="spot">早餐+退房，行李上车</span><br><span class="note">行李全天留在有司机看管的商务车上，不用拖着走</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">08:00</span><div class="schedule-content"><span class="spot">吉萨金字塔群+狮身人面像</span> <span class="tag tag-must">必去</span><br><span class="note">三大金字塔（胡夫、海夫拉、孟卡拉）+狮身人面像。门票约200埃镑/人，进胡夫金字塔内部另购约400埃镑（可选，里面较闷）。园区内用用车，不做长时间骆驼。骑骆驼先谈好总价+货币+时长</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">11:15</span><div class="schedule-content"><span class="spot">Mena House午餐</span> <span class="tag tag-opt">推荐</span><br><span class="note">百年地标酒店，金字塔景观餐厅，务必预约。12:15准时离开</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">12:30</span><div class="schedule-content"><span class="spot">大埃及博物馆 GEM</span> <span class="tag tag-must">必去</span><br><span class="note">2024年新开全球最大考古博物馆，图坦卡蒙全部文物（含黄金面具）。提前预约12:30-13:00时段，门票约500埃镑/人。只抓核心展区，预留2.5小时，租讲解器</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">15:30</span><div class="schedule-content"><span class="spot">从GEM出发，回市区休息/晚餐</span><br><span class="note">GEM到机场约45-90分钟。因为航班是23:20，时间充裕，可以回市区酒店附近休息、吃晚餐，或去哈利利补买伴手礼</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">19:30</span><div class="schedule-content"><span class="spot">晚餐</span><br><span class="note">简单吃，不要吃太撑，等下要坐飞机</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">20:20</span><div class="schedule-content"><span class="spot">出发去开罗机场T3</span><br><span class="note">23:20航班，提前3小时值机。两队同乘埃及航空MS80</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">23:20</span><div class="schedule-content"><span class="spot">起飞 → 阿斯旺</span><br><span class="note">埃及航空MS80，波音737-800，有餐食，托运23kg+手提8kg</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>阿斯旺 Old Cataract（凌晨00:40到达，提前通知酒店晚到） 🍽️ <strong>含：</strong>早、午、晚餐</div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 3</span><span class="day-date">10月1日 周四</span></div>
+          <div><span class="day-theme">阿布辛贝+Felucca日落</span><span class="day-city">📍 阿斯旺</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day3</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/1</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">阿斯旺↔阿布辛贝往返</text>
+        
+        <!-- 阿斯旺到阿布辛贝区域（向南） -->
+        <rect x="25" y="38" width="250" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="150" y="138" font-size="9" fill="#AAA" text-anchor="middle">阿斯旺省 · 纳赛尔湖</text>
+        <!-- 纳赛尔湖 -->
+        <path d="M 60,100 C 100,95 140,100 180,95 C 210,92 240,98 265,90" fill="none" stroke="#5DADE2" stroke-width="8" opacity="0.25"/>
+        <text x="160" y="93" font-size="8" fill="#5DADE2" opacity="0.6" text-anchor="middle">纳赛尔湖</text>
+        <!-- 阿斯旺酒店（北端） -->
+        <circle cx="230" cy="60" r="8" fill="#B8860B" stroke="white" stroke-width="2"/>
+        <text x="230" y="64" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="230" y="80" font-size="9" fill="#B8860B" font-weight="600" text-anchor="middle">阿斯旺酒店</text>
+        <!-- 阿布辛贝神庙（南端，较远） -->
+        <circle cx="55" cy="110" r="9" fill="#E07A5F" stroke="white" stroke-width="2"/>
+        <text x="55" y="114" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏛</text>
+        <text x="55" y="130" font-size="9" fill="#E07A5F" font-weight="600" text-anchor="middle">阿布辛贝神庙</text>
+        <!-- 去程路线 -->
+        <path d="M 222,65 C 180,78 120,95 64,106" fill="none" stroke="#E07A5F" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#ma3)"/>
+        <text x="130" y="78" font-size="8.5" fill="#E07A5F" font-weight="600">🚗 07:00出发 · 3h</text>
+        <!-- 回程路线（虚线） -->
+        <path d="M 64,112 C 120,100 180,85 222,72" fill="none" stroke="#E07A5F" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.45"/>
+        <text x="130" y="100" font-size="8" fill="#E07A5F" opacity="0.7">↩ 下午返回 · 3h</text>
+        <!-- 距离标注 -->
+        <rect x="290" y="55" width="115" height="55" rx="6" fill="#FFF3E0" stroke="#E07A5F" stroke-width="1"/>
+        <text x="347" y="75" font-size="9" fill="#E07A5F" font-weight="700" text-anchor="middle">单程 280km</text>
+        <text x="347" y="90" font-size="8.5" fill="#666" text-anchor="middle">包车约3小时</text>
+        <text x="347" y="103" font-size="8" fill="#999" text-anchor="middle">参考3400埃镑/车</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">06:15</span><div class="schedule-content"><span class="spot">起床+早餐盒</span><br><span class="note">酒店前一晚准备好早餐盒（香蕉、面包、煮鸡蛋、酸奶、瓶装水）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">07:00</span><div class="schedule-content"><span class="spot">从Old Cataract出发包车去阿布辛贝</span> <span class="tag tag-must">必去</span><br><span class="note">7-9座空调商务车，不拼团。单程280km，约3.5小时，含检查站。提前办好道路许可。司机在停车区等候</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">10:30</span><div class="schedule-content"><span class="spot">阿布辛贝两座神庙深度参观</span> <span class="tag tag-must">必去</span><br><span class="note">拉美西斯二世大神庙（四座20米高坐像）+ 哈索尔小神庙（奈菲尔塔利）。埃及最震撼的神庙，预留2小时。门票约260埃镑/人</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">12:30</span><div class="schedule-content"><span class="spot">返回阿斯旺</span><br><span class="note">约280km，3.5小时，中途一次洗手间休息。不在途中购物点停留</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">16:00</span><div class="schedule-content"><span class="spot">回房休息+补水+换衣</span><br><span class="note">坐了一天车，回酒店冲澡休息，不追加景点</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">16:45</span><div class="schedule-content"><span class="spot">私人Felucca风帆船看日落</span> <span class="tag tag-opt">推荐</span><br><span class="note">Old Cataract附近码头，日落约17:35。私人帆船约45-60分钟，在尼罗河上看阿斯旺日落，非常惬意</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">19:00</span><div class="schedule-content"><span class="spot">酒店晚餐+休息</span><br><span class="note">Old Cataract餐厅，努比亚风味。不再出城</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>阿斯旺 Old Cataract 🍽️ <strong>含：</strong>早（盒）、午（简餐）、晚餐</div>
+          <div class="tip-box" style="margin-top:12px;"><strong>💡 阿布辛贝包车必须写明：</strong>持牌旅游车、7-9座空调、含燃油/停车/司机/等候/许可和酒店接送、提前24小时给车牌司机电话车辆照片、中文导游或至少中文WhatsApp协调员。不要通过街头司机或社交平台陌生人订车，建议由Old Cataract礼宾或持牌DMC安排，用信用卡/平台支付。</div>
+        </div>
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 4</span><span class="day-date">10月2日 周五</span></div>
+          <div><span class="day-theme">菲莱神庙+包车去卢克索</span><span class="day-city">📍 阿斯旺→卢克索</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day4</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/2</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">菲莱神庙→包车卢克索</text>
+        
+        <!-- 阿斯旺→卢克索（沿尼罗河北上） -->
+        <rect x="25" y="38" width="260" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="155" y="138" font-size="9" fill="#AAA" text-anchor="middle">尼罗河谷 · 阿斯旺→卢克索</text>
+        <!-- 尼罗河 -->
+        <path d="M 80,140 C 90,115 95,90 100,65 C 103,50 108,42 115,38" fill="none" stroke="#5DADE2" stroke-width="5" opacity="0.35"/>
+        <!-- 阿斯旺酒店（南端） -->
+        <circle cx="90" cy="115" r="7" fill="#B8860B" stroke="white" stroke-width="2"/>
+        <text x="90" y="119" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="90" y="133" font-size="8.5" fill="#B8860B" text-anchor="middle">阿斯旺酒店</text>
+        <!-- 菲莱神庙（阿斯旺附近小岛） -->
+        <circle cx="55" cy="90" r="7" fill="#C9A227" stroke="white" stroke-width="2"/>
+        <text x="55" y="94" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏛</text>
+        <text x="55" y="108" font-size="8.5" fill="#B8860B" text-anchor="middle">菲莱神庙</text>
+        <!-- 卢克索酒店（北端） -->
+        <circle cx="220" cy="55" r="8" fill="#8B4513" stroke="white" stroke-width="2"/>
+        <text x="220" y="59" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="220" y="75" font-size="9" fill="#8B4513" font-weight="600" text-anchor="middle">卢克索酒店</text>
+        <!-- 卢克索神庙（酒店附近） -->
+        <circle cx="255" cy="70" r="6" fill="#A0522D" stroke="white" stroke-width="1.5"/>
+        <text x="255" y="73" font-size="7" fill="white" font-weight="700" text-anchor="middle">🏛</text>
+        <text x="255" y="85" font-size="8" fill="#A0522D" text-anchor="middle">卢克索神庙</text>
+        <!-- 路线1：酒店→菲莱 -->
+        <path d="M 84,110 C 75,102 65,96 60,93" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma2)"/>
+        <text x="58" y="118" font-size="7.5" fill="#B8860B">🚗+⛴</text>
+        <!-- 路线2：菲莱→卢克索（沿尼罗河包车北上） -->
+        <path d="M 62,87 C 110,78 165,68 212,58" fill="none" stroke="#8B4513" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#ma4)"/>
+        <text x="120" y="72" font-size="8.5" fill="#8B4513" font-weight="600">🚗 包车3.5h · 220km</text>
+        <!-- 路线3：酒店→卢克索神庙（晚上） -->
+        <path d="M 228,58 C 238,62 248,66 252,68" fill="none" stroke="#A0522D" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ma4)"/>
+        <text x="225" y="48" font-size="7.5" fill="#A0522D">🌙 步行/马车</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">07:45</span><div class="schedule-content"><span class="spot">早餐</span><br><span class="note">悠闲早餐</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">08:30</span><div class="schedule-content"><span class="spot">菲莱神庙 Philae Temple</span> <span class="tag tag-must">必去</span><br><span class="note">伊西斯神庙，位于阿吉勒基亚岛，码头换小船上岛。古埃及最后一座神庙，石柱和浮雕精美，碧蓝湖水环绕。门票约160埃镑/人，船费另付（约100-200埃镑/船）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">10:00</span><div class="schedule-content"><span class="spot">回酒店取行李</span><br><span class="note">车程约20-30分钟</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">10:30</span><div class="schedule-content"><span class="spot">包车出发去卢克索</span> <span class="tag tag-tip">交通</span><br><span class="note">持牌7-9座商务车，约230-250km，3.5-4.5小时，白天直达。路上只停一次，不塞入康翁波、埃德富等额外景点（会增加1.5-2小时并显著增加夜路）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">14:30</span><div class="schedule-content"><span class="spot">到达卢克索，入住Sofitel Winter Palace</span><br><span class="note">历史建筑酒店，尼罗河畔，位置适合夜游和次日出发。入住+午餐+午睡，不安排白天神庙</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">18:00</span><div class="schedule-content"><span class="spot">卢克索神庙夜游</span> <span class="tag tag-must">必去</span><br><span class="note">东岸，灯光体验，晚上比白天更美。开放到22:00。门票约160埃镑/人。狮身人面像大道夜景壮观</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">20:00</span><div class="schedule-content"><span class="spot">晚餐+早睡</span><br><span class="note">明天6:30出发，早睡</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>卢克索 Sofitel Winter Palace（东岸） 🍽️ <strong>含：</strong>早、午、晚餐</div>
+        </div>
+      </div>
+
+      <!-- DAY 5 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 5</span><span class="day-date">10月3日 周六</span></div>
+          <div><span class="day-theme">卢克索精华+包车去红海</span><span class="day-city">📍 卢克索→赫尔格达</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day5</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/3</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">帝王谷+卡纳克→包车红海</text>
+        
+        <!-- 卢克索东西岸+赫尔格达 -->
+        <rect x="25" y="38" width="370" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="210" y="138" font-size="9" fill="#AAA" text-anchor="middle">卢克索（东西岸）→ 赫尔格达</text>
+        <!-- 尼罗河分隔东西岸 -->
+        <path d="M 105,38 C 108,65 106,95 110,143" fill="none" stroke="#5DADE2" stroke-width="4" opacity="0.4"/>
+        <text x="88" y="90" font-size="8" fill="#5DADE2" opacity="0.6" transform="rotate(-90,88,90)">尼罗河</text>
+        <text x="60" y="52" font-size="8" fill="#999">西岸</text>
+        <text x="140" y="52" font-size="8" fill="#999">东岸</text>
+        <!-- 卢克索酒店（东岸） -->
+        <circle cx="145" cy="75" r="7" fill="#8B4513" stroke="white" stroke-width="2"/>
+        <text x="145" y="79" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="145" y="93" font-size="8.5" fill="#8B4513" text-anchor="middle">卢克索酒店</text>
+        <!-- 帝王谷（西岸） -->
+        <circle cx="60" cy="70" r="8" fill="#A0522D" stroke="white" stroke-width="2"/>
+        <text x="60" y="74" font-size="8" fill="white" font-weight="700" text-anchor="middle">⚰</text>
+        <text x="60" y="90" font-size="8.5" fill="#A0522D" text-anchor="middle">帝王谷</text>
+        <!-- 卡纳克神庙（东岸，北） -->
+        <circle cx="170" cy="50" r="8" fill="#C9A227" stroke="white" stroke-width="2"/>
+        <text x="170" y="54" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏛</text>
+        <text x="170" y="40" font-size="8.5" fill="#B8860B" text-anchor="middle">卡纳克神庙</text>
+        <!-- 赫尔格达酒店（东，红海） -->
+        <circle cx="355" cy="80" r="8" fill="#2E8B57" stroke="white" stroke-width="2"/>
+        <text x="355" y="84" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="355" y="100" font-size="9" fill="#2E8B57" font-weight="600" text-anchor="middle">红海酒店</text>
+        <!-- 红海 -->
+        <rect x="370" y="38" width="25" height="105" fill="#B8DFF0" opacity="0.4" rx="0"/>
+        <!-- 路线1：酒店→帝王谷（渡河） -->
+        <path d="M 138,73 C 115,71 90,70 68,70" fill="none" stroke="#A0522D" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma4)"/>
+        <text x="90" y="64" font-size="7.5" fill="#A0522D">⛴+🚗</text>
+        <!-- 路线2：帝王谷→卡纳克 -->
+        <path d="M 66,66 C 100,58 135,53 162,51" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma2)"/>
+        <text x="100" y="50" font-size="7.5" fill="#B8860B">🚗20min</text>
+        <!-- 路线3：卡纳克→赫尔格达（向东跨沙漠） -->
+        <path d="M 178,54 C 240,60 300,70 347,77" fill="none" stroke="#2E8B57" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#ma5)"/>
+        <text x="245" y="68" font-size="8.5" fill="#2E8B57" font-weight="600">🚗 包车4.5h · 280km</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">06:30</span><div class="schedule-content"><span class="spot">酒店出发（早餐盒随车）</span><br><span class="note">东岸→西岸，早餐盒随车。今天是全程最忙的一天，但景点集中</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">07:00</span><div class="schedule-content"><span class="spot">帝王谷 Valley of the Kings</span> <span class="tag tag-must">必去</span><br><span class="note">西岸，上午先避高温。普通票含3个墓（约300埃镑），最多1座加票墓室（推荐拉美西斯六世或塞提一世，另购票）。墓内禁止拍照（手机也不行），违规罚款</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">09:15</span><div class="schedule-content"><span class="spot">哈特谢普苏特神庙+门农巨像短停</span> <span class="tag tag-must">必去</span><br><span class="note">女法老祭庙，三层阶梯式建筑背靠悬崖。门票约160埃镑。门农巨像路边免费拍5分钟</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">10:45</span><div class="schedule-content"><span class="spot">跨河/车上补水</span><br><span class="note">不进购物店，回东岸</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">10:45</span><div class="schedule-content"><span class="spot">卡纳克神庙 Karnak Temple</span> <span class="tag tag-must">必去</span><br><span class="note">东岸，古埃及最大神庙群，134根巨柱多柱厅震撼。门票约200埃镑/人。建议请当地导游讲解（可拼团约300-500埃镑/团）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">12:15</span><div class="schedule-content"><span class="spot">简餐+取行李</span><br><span class="note">酒店或车上简餐，14:00前必须离开卢克索</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">13:00</span><div class="schedule-content"><span class="spot">包车出发去赫尔格达</span> <span class="tag tag-tip">交通</span><br><span class="note">约280-310km，4.5-5小时含检查站/休息。这段没有合理直飞航班，包车是最优解。若车辆故障，由同一持牌公司派替换车并书面告知车牌</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">18:30</span><div class="schedule-content"><span class="spot">到达赫尔格达，入住全包酒店</span> <span class="tag tag-must">推荐</span><br><span class="note">Steigenberger ALDAU Beach（必须All Inclusive全包，含三餐+酒水+泳池+私人沙滩）。办理入住后直接吃晚餐，不再进城</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>赫尔格达 Steigenberger ALDAU Beach（全包） 🍽️ <strong>含：</strong>早（盒）、午（简餐）、晚餐（全包）</div>
+        </div>
+      </div>
+
+      <!-- DAY 6 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div><span class="day-num">DAY 6</span><span class="day-date">10月4日 周日</span></div>
+          <div><span class="day-theme">红海全包度假</span><span class="day-city">📍 赫尔格达</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day6</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/4</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">红海全包度假 · 休整日</text>
+        
+        <!-- 赫尔格达红海度假村区域 -->
+        <rect x="25" y="38" width="370" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="210" y="138" font-size="9" fill="#AAA" text-anchor="middle">赫尔格达 · 红海沿岸度假区</text>
+        <!-- 红海（东侧大片） -->
+        <rect x="250" y="38" width="145" height="105" fill="#B8DFF0" opacity="0.35"/>
+        <text x="320" y="92" font-size="11" fill="#1B4F72" font-weight="700" opacity="0.4" text-anchor="middle">红 海</text>
+        <!-- 海岸线 -->
+        <path d="M 250,38 C 248,60 252,85 248,110 C 250,125 252,135 250,143" fill="none" stroke="#5BA3C9" stroke-width="2" opacity="0.5"/>
+        <!-- 全包度假酒店 -->
+        <circle cx="180" cy="75" r="10" fill="#2E8B57" stroke="white" stroke-width="2.5"/>
+        <text x="180" y="80" font-size="10" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="180" y="98" font-size="10" fill="#2E8B57" font-weight="700" text-anchor="middle">全包度假酒店</text>
+        <text x="180" y="110" font-size="8.5" fill="#666" text-anchor="middle">私人沙滩 · 泳池 · 餐饮全包</text>
+        <!-- 酒店私人沙滩 -->
+        <circle cx="240" cy="85" r="6" fill="#E07A5F" stroke="white" stroke-width="1.5"/>
+        <text x="240" y="88" font-size="7" fill="white" font-weight="700" text-anchor="middle">🏖</text>
+        <text x="240" y="100" font-size="8" fill="#E07A5F" text-anchor="middle">私人沙滩</text>
+        <!-- 浮潜/出海点 -->
+        <circle cx="310" cy="65" r="7" fill="#1B4F72" stroke="white" stroke-width="2"/>
+        <text x="310" y="69" font-size="8" fill="white" font-weight="700" text-anchor="middle">🤿</text>
+        <text x="310" y="83" font-size="8.5" fill="#1B4F72" text-anchor="middle">浮潜/出海</text>
+        <!-- 赫尔格达市区（可选） -->
+        <circle cx="80" cy="105" r="6" fill="#999" stroke="white" stroke-width="1.5"/>
+        <text x="80" y="108" font-size="7" fill="white" font-weight="700" text-anchor="middle">🏘</text>
+        <text x="80" y="120" font-size="8" fill="#999" text-anchor="middle">赫尔格达市区</text>
+        <!-- 活动路线（短距离） -->
+        <path d="M 190,78 C 210,80 225,82 234,84" fill="none" stroke="#E07A5F" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ma3)"/>
+        <path d="M 244,85 C 270,78 290,70 303,67" fill="none" stroke="#1B4F72" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#ma1)"/>
+        <text x="265" y="95" font-size="8" fill="#666" text-anchor="middle">全天酒店内自由活动 · 不赶路</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">自然醒</span><div class="schedule-content"><span class="spot">慢早餐+海滩+泳池</span><br><span class="note">前几天暴走，今天完整休息日。自然醒，全包自助早餐，然后海滩/泳池/浮潜/SPA</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">上午</span><div class="schedule-content"><span class="spot">可选3-4h私人浮潜船</span> <span class="tag tag-opt">可选</span><br><span class="note">只通过酒店礼宾或持证潜水中心预订，约$30-50/人，含浮潜装备+2-3个潜点+饮料。红海是全球顶级浮潜圣地，珊瑚礁+热带鱼+可能看到海龟</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">下午</span><div class="schedule-content"><span class="spot">午睡+沙滩+日落</span><br><span class="note">不叠加海豚追逐、全天橙湾、沙漠越野和夜市，一天最多一个可选活动。风浪大或有人晕船/不想下水，直接纯酒店度假，不损失核心体验</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">晚上</span><div class="schedule-content"><span class="spot">全包晚餐+酒店表演</span><br><span class="note">全包酒店晚餐通常有主题之夜，菜品丰富</span></div></div>
+          <div class="day-stay">🏨 <strong>住宿：</strong>赫尔格达全包酒店 🍽️ <strong>含：</strong>早、午、晚餐（全包）</div>
+          <div class="tip-box" style="margin-top:12px;"><strong>💡 赫尔格达到货必看：</strong>房价名称必须明确写All Inclusive，不要误选Breakfast Only或Half Board。确认酒水、迷你吧、单点餐厅、SPA、水上活动是否包含（全包并不等于所有项目免费）。要求安静区、远离舞台/夜间娱乐，两间房同楼层。</div>
+        </div>
+      </div>
+
+      <!-- DAY 7 分流日 -->
+      <div class="day-block">
+        <div class="day-header" style="background:linear-gradient(135deg,#B8860B,#C9A227);">
+          <div><span class="day-num">DAY 7</span><span class="day-date">10月5日 周一</span></div>
+          <div><span class="day-theme">分流日 · 两队分别返程</span><span class="day-city">📍 赫尔格达→开罗</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day7</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/5</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">红海→飞开罗（两组分流）</text>
+        
+        <!-- 赫尔格达→开罗 -->
+        <rect x="25" y="38" width="200" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="125" y="138" font-size="9" fill="#AAA" text-anchor="middle">赫尔格达 → 开罗</text>
+        <rect x="175" y="38" width="50" height="105" fill="#B8DFF0" opacity="0.3"/>
+        <!-- 红海酒店 -->
+        <circle cx="70" cy="80" r="8" fill="#2E8B57" stroke="white" stroke-width="2"/>
+        <text x="70" y="84" font-size="8" fill="white" font-weight="700" text-anchor="middle">🏨</text>
+        <text x="70" y="100" font-size="9" fill="#2E8B57" font-weight="600" text-anchor="middle">红海酒店</text>
+        <!-- 赫尔格达机场 -->
+        <circle cx="165" cy="60" r="7" fill="#888" stroke="white" stroke-width="2"/>
+        <text x="165" y="64" font-size="8" fill="white" font-weight="700" text-anchor="middle">✈</text>
+        <text x="165" y="78" font-size="8.5" fill="#555" text-anchor="middle">赫尔格达机场</text>
+        <!-- 路线：酒店→机场 -->
+        <path d="M 78,76 C 110,70 140,65 158,62" fill="none" stroke="#888" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ma1)"/>
+        <text x="105" y="68" font-size="8" fill="#666">🚗20min</text>
+        <!-- 招财组航班 -->
+        <rect x="240" y="42" width="165" height="45" rx="6" fill="#E8F4FD" stroke="#1B4F72" stroke-width="1.2"/>
+        <text x="322" y="60" font-size="10" fill="#1B4F72" font-weight="800" text-anchor="middle">💰 招财组（3人）</text>
+        <text x="322" y="76" font-size="9" fill="#333" text-anchor="middle">18:15飞 · 19:45到开罗</text>
+        <text x="322" y="88" font-size="8" fill="#666" text-anchor="middle">SM025 · 直接转国际00:40</text>
+        <!-- 天哥组航班 -->
+        <rect x="240" y="95" width="165" height="45" rx="6" fill="#FFF8E6" stroke="#B8860B" stroke-width="1.2"/>
+        <text x="322" y="113" font-size="10" fill="#B8860B" font-weight="800" text-anchor="middle">🎯 天哥组（4人）</text>
+        <text x="322" y="129" font-size="9" fill="#333" text-anchor="middle">23:00飞 · 00:30到开罗</text>
+        <text x="322" y="141" font-size="8" fill="#666" text-anchor="middle">住机场酒店 · 次日13:00飞</text>
+    
+      </svg>
+    </div>
+          <div class="warn-box">
+            <strong>⚠ 今日关键分流：</strong>招财组18:15飞开罗（不住酒店，直接转国际00:40飞）；天哥组23:00飞开罗（住机场酒店）。两队上午共享红海，下午开始分头行动。
+          </div>
+          <div class="schedule-row"><span class="schedule-time">08:00-11:30</span><div class="schedule-content"><span class="spot">两队共享：红海早餐+海滩+泳池</span><br><span class="note">最后享受红海，拍照留念</span></div></div>
+          <div class="split-grid">
+            <div class="split-group zc">
+              <h5>🔵 招财组（3人）— 18:15飞开罗，直接转国际</h5>
+              <ul>
+                <li>11:30 收拾行李，退房（行李可寄存前台）</li>
+                <li>12:00-13:30 全包酒店午餐，最后吃一顿</li>
+                <li>14:00 取行李，出发去HRG机场T2（ALDAU到机场约10-15分钟）</li>
+                <li>14:30 到达机场，办理开罗航空SM025值机（托运23kg）</li>
+                <li>18:15 起飞，19:45到达开罗T3</li>
+                <li>20:00 取行李，从T3转到T2（接驳车/步行约10-15分钟）</li>
+                <li>20:30-21:30 T2吃晚餐+休息（机场有餐厅，不用付费休息室）</li>
+                <li>21:40 国际航班开始值机（卡塔尔航空QR1306，提前3小时）</li>
+                <li>00:40 国际航班起飞，经多哈、新加坡回上海</li>
+              </ul>
+            </div>
+            <div class="split-group tg">
+              <h5>🟡 天哥组（4人）— 23:00飞开罗，住机场酒店</h5>
+              <ul>
+                <li>11:30后继续享受全包酒店（海滩/泳池/午餐）</li>
+                <li>下午继续红海度假，午睡/沙滩/拍照</li>
+                <li>18:00 全包晚餐</li>
+                <li>20:00 收拾行李，退房</li>
+                <li>21:00 出发去HRG机场（已订航班23:00起飞）</li>
+                <li>23:00 起飞，10/6 00:30到达开罗</li>
+                <li>00:45 取行李，入住Le Méridien Cairo Airport（T3连廊酒店）</li>
+                <li>凌晨休息，10/6 13:00国际航班起飞</li>
+              </ul>
+            </div>
+          </div>
+          <div class="day-stay" style="margin-top:14px;">🏨 <strong>招财组：</strong>不住酒店，机场直接转国际航班 &nbsp;|&nbsp; <strong>天哥组：</strong>开罗机场酒店Le Méridien 🍽️ <strong>含：</strong>早、午餐（全包），晚餐各自安排</div>
+        </div>
+      </div>
+
+      <!-- DAY 8 -->
+      <div class="day-block">
+        <div class="day-header" style="background:linear-gradient(135deg,#2E8B57,#3CB371);">
+          <div><span class="day-num">DAY 8</span><span class="day-date">10月6日 周二</span></div>
+          <div><span class="day-theme">天哥组返程 · 旅程结束</span><span class="day-city">📍 开罗</span></div>
+        </div>
+        <div class="day-body">
+<div class="day-minimap">
+      <svg viewBox="0 0 420 155" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ma1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1B4F72"/></marker>
+          <marker id="ma2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C9A227"/></marker>
+          <marker id="ma3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E07A5F"/></marker>
+          <marker id="ma4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8B4513"/></marker>
+          <marker id="ma5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E8B57"/></marker>
+        </defs>
+        <rect width="420" height="155" fill="#F7F8FA" rx="8"/>
+        <rect x="8" y="8" width="56" height="20" rx="10" fill="#1B4F72"/>
+        <text x="36" y="22" font-size="10" fill="white" font-weight="700" text-anchor="middle">Day8</text>
+        <text x="72" y="22" font-size="9.5" fill="#666">10/6</text>
+        <text x="140" y="22" font-size="10" fill="#333" font-weight="600">开罗机场离境</text>
+        
+        <!-- 开罗机场 -->
+        <rect x="25" y="38" width="370" height="105" rx="6" fill="#F0E6D0" stroke="#D4C4A0" stroke-width="1"/>
+        <text x="210" y="138" font-size="9" fill="#AAA" text-anchor="middle">开罗国际机场 · 离境</text>
+        <!-- 机场大楼 -->
+        <rect x="140" y="55" width="140" height="60" rx="8" fill="#E8E8E8" stroke="#999" stroke-width="1.5"/>
+        <text x="210" y="80" font-size="12" fill="#555" font-weight="700" text-anchor="middle">✈ 开罗国际机场</text>
+        <text x="210" y="96" font-size="9" fill="#888" text-anchor="middle">Cairo International Airport</text>
+        <!-- T2航站楼（国际出发） -->
+        <circle cx="175" cy="105" r="6" fill="#1B4F72" stroke="white" stroke-width="1.5"/>
+        <text x="175" y="108" font-size="7" fill="white" font-weight="700" text-anchor="middle">T2</text>
+        <!-- T3航站楼（国内到达） -->
+        <circle cx="245" cy="105" r="6" fill="#2E8B57" stroke="white" stroke-width="1.5"/>
+        <text x="245" y="108" font-size="7" fill="white" font-weight="700" text-anchor="middle">T3</text>
+        <text x="210" y="122" font-size="8" fill="#999" text-anchor="middle">T3国内到达 → 步行/摆渡 → T2国际出发</text>
+        <!-- 招财组（已走） -->
+        <rect x="30" y="50" width="100" height="40" rx="6" fill="#E8F4FD" stroke="#1B4F72" stroke-width="1"/>
+        <text x="80" y="67" font-size="9" fill="#1B4F72" font-weight="700" text-anchor="middle">💰 招财组</text>
+        <text x="80" y="82" font-size="8" fill="#666" text-anchor="middle">00:40已飞 ✅</text>
+        <!-- 天哥组 -->
+        <rect x="300" y="50" width="100" height="40" rx="6" fill="#FFF8E6" stroke="#B8860B" stroke-width="1"/>
+        <text x="350" y="67" font-size="9" fill="#B8860B" font-weight="700" text-anchor="middle">🎯 天哥组</text>
+        <text x="350" y="82" font-size="8" fill="#666" text-anchor="middle">13:00飞 ⏳</text>
+        <!-- 时间线 -->
+        <text x="80" y="108" font-size="7.5" fill="#999" text-anchor="middle">10/6凌晨</text>
+        <text x="350" y="108" font-size="7.5" fill="#999" text-anchor="middle">10/6下午</text>
+    
+      </svg>
+    </div>
+          <div class="schedule-row"><span class="schedule-time">00:40</span><div class="schedule-content"><span class="spot">招财组已在飞</span><span class="tag tag-zc">招财组</span><br><span class="note">经多哈、新加坡，10/7 06:20到达上海浦东T1</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">07:30</span><div class="schedule-content"><span class="spot">天哥组起床+早餐+退房</span><span class="tag tag-tg">天哥组</span><br><span class="note">Le Méridien酒店早餐，核对国际航站楼（13:00航班，确认T2还是T3）</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">09:30</span><div class="schedule-content"><span class="spot">到达对应航站楼</span><br><span class="note">国际航班至少提前3小时办理。Le Méridien与T3有连廊，若从其他航站楼出发，使用酒店接驳并多留30分钟</span></div></div>
+          <div class="schedule-row"><span class="schedule-time">13:00</span><div class="schedule-content"><span class="spot">天哥组国际航班起飞</span><br><span class="note">经多哈、吉隆坡，10/8 01:55到达上海浦东T1。旅程圆满结束！</span></div></div>
+          <div class="day-stay">✈️ <strong>两队均在返程飞行中</strong> 🍽️ <strong>含：</strong>天哥组早餐</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 交通方案 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🚗</span> 交通方案详解</div>
+    <div class="section-desc">7人出行，交通是关键。以下为各段交通的对比和推荐。</div>
+    <table class="info-table">
+      <thead><tr><th>路段</th><th>方式</th><th>距离/时长</th><th>费用（约）</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr><td>机场→开罗市区</td><td>7-9座商务车包车</td><td>约22km / 35-70min</td><td class="price">300-500 EGP/车</td><td>提前约好，比Uber划算</td></tr>
+        <tr><td>开罗市内（金字塔+GEM）</td><td>7-9座商务车包车（全天）</td><td>—</td><td class="price">1200-1800 EGP/车/天</td><td>行李全天留车上，司机看管</td></tr>
+        <tr><td>开罗→阿斯旺</td><td>内陆飞机（已订MS80）</td><td>1h20m</td><td class="price">含在组合票中</td><td>两队同机，23:20起飞</td></tr>
+        <tr><td>阿斯旺→阿布辛贝往返</td><td>7-9座商务车包车</td><td>单程280km / 3.5h</td><td class="price">3000-4000 EGP/车<br><span style="font-size:0.78em;color:var(--gray);">参考实际3400（含小费100）</span></td><td>持牌旅游车+道路许可，07:00出发</td></tr>
+        <tr><td>阿斯旺→卢克索</td><td>7-9座商务车包车</td><td>230-250km / 3.5-4.5h</td><td class="price">2500-3000 EGP/车<br><span style="font-size:0.78em;color:var(--gray);">参考实际3100</span></td><td>白天直达，不塞额外景点</td></tr>
+        <tr><td>卢克索→赫尔格达</td><td>7-9座商务车包车</td><td>280-310km / 4.5-5h</td><td class="price">3000-4000 EGP/车<br><span style="font-size:0.78em;color:var(--gray);">参考实际3500</span></td><td>含检查站/休息，无合理直飞</td></tr>
+        <tr><td>赫尔格达→开罗</td><td>内陆飞机</td><td>1h30m</td><td class="price">含在组合票中</td><td>招财18:15 / 天哥23:00</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box" style="margin-top:16px;">
+      <strong>统一车辆标准：</strong>Toyota Hiace、Hyundai H1或同级7-9座空调商务车；7人+7个大箱，不订普通轿车。全座安全带、司机不吸烟、不拼团、不绕购物点；报价含燃油、高速、停车、司机餐宿和等候。出发前24小时获得公司名称、执照、司机姓名、手机号、车牌、车辆照片和保险信息。长途白天走，拒绝临时夜路，两段长途都安排一次干净洗手间和补水。
+    </div>
+    <div class="tip-box" style="margin-top:10px;background:linear-gradient(135deg,#FFF8E6,#FFFBF0);border-color:var(--gold);">
+      <strong>📕 小红书实际找车经验：</strong>每段包车可以<strong>分开找不同司机</strong>，不用一家公司包全程。推荐在小红书上提前约，选<strong>评分4.9以上</strong>的司机/车队，价格更透明。三段长途实际成交价参考：阿斯旺↔阿布辛贝约3400埃镑（含小费100）、阿斯旺→卢克索约3100埃镑、卢克索→赫尔格达约3500埃镑。订车时用WhatsApp书面确认总价（all inclusive）、车型、车牌、司机电话，用信用卡/平台支付，不向私人账户转全款。
+    </div>
+  </div>
+</section>
+
+<!-- 住宿推荐 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🏨</span> 住宿推荐</div>
+    <div class="section-desc">7人需3-4间房（建议同楼层/相邻房），全部为候选，先订可取消价格。</div>
+    <table class="info-table">
+      <thead><tr><th>日期/城市</th><th>酒店</th><th>推荐理由</th><th>注意</th></tr></thead>
+      <tbody>
+        <tr><td>9/29 开罗</td><td>The St. Regis Cairo（首选）<br>Marriott Mena House（备选）</td><td>首选：中心位置、安保与服务稳定<br>备选：百年地标、金字塔景观最强</td><td>约25-45分钟到老城<br>适合更重视特色景观</td></tr>
+        <tr><td>9/30-10/2 阿斯旺（2晚）</td><td>Old Cataract, Aswan</td><td>历史名店、尼罗河景观、可选Palace Wing，最有纪念性</td><td>两晚；9/30凌晨到，提前写邮件确认晚到和早餐盒</td></tr>
+        <tr><td>10/2 卢克索（1晚）</td><td>Sofitel Winter Palace（首选）<br>Jolie Ville Kings Island（备选）</td><td>首选：历史建筑、位置适合夜游与次日出发<br>备选：《花儿与少年》同款酒店</td><td>1晚；东岸<br>更度假，但离市区较远</td></tr>
+        <tr><td>10/3-10/5 赫尔格达（2晚）</td><td>Steigenberger ALDAU Beach（首选）<br>Rixos Premium Magawish（升级备选）</td><td>首选：顶级全包、海滩、巨型泳池、活动丰富<br>备选：更偏Ultra All Inclusive与娱乐</td><td>必须选All Inclusive<br>先书面确认"两位单身女性同住"符合政策</td></tr>
+        <tr><td>10/5 开罗机场（天哥组）</td><td>Le Méridien Cairo Airport</td><td>T3连廊，返程风险最低</td><td>仅天哥组住；招财组不住</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box" style="margin-top:16px;">
+      <strong>酒店邮件模板（英文）：</strong>We are 7 Chinese travelers (3 in Zhaocai group + 4 in Tiange group). We need 3-4 rooms on the same floor, preferably adjacent. Please confirm guest policy, airport transfer, breakfast box and late-arrival arrangements in writing.
+    </div>
+  </div>
+</section>
+
+<!-- 门票与预约 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🎫</span> 门票、预约顺序与购买方式</div>
+    <div class="section-desc">先订影响路线的航班和车，再订酒店，最后订可替换门票与活动。</div>
+    <table class="info-table">
+      <thead><tr><th>时间</th><th>项目</th><th>购买/确认方式</th></tr></thead>
+      <tbody>
+        <tr><td>立即</td><td>9/30 CAI→ASW、10/5 HRG→CAI（内陆机票）</td><td>航司官网；护照拼音必须一致；选含托运行李的可改签票</td></tr>
+        <tr><td>立即</td><td>阿布辛贝包车+中文协调</td><td>Old Cataract礼宾/持牌DMC；书面确认许可和07:00出发</td></tr>
+        <tr><td>立即</td><td>全部酒店</td><td>官网/Booking；先可取消；房型与餐饮计划写清</td></tr>
+        <tr><td>尽快</td><td>GEM分时门票</td><td>官网约9/30 12:30-13:00时段；截图保存二维码</td></tr>
+        <tr><td>1-2周前</td><td>金字塔/城堡/菲莱/阿布辛贝/卢克索古迹</td><td>Egypt Monuments官网；加票墓室另选</td></tr>
+        <tr><td>1-2周前</td><td>中文导游和两段跨城车</td><td>确认执照、车牌、总价、取消条款</td></tr>
+        <tr><td>3-7天前</td><td>Felucca和红海半日船</td><td>酒店礼宾；按风浪和健康状况决定</td></tr>
+      </tbody>
+    </table>
+    <div class="warn-box" style="margin-top:14px;">
+      <strong>购票注意：</strong>金字塔园区票不等于胡夫金字塔内部票；帝王谷普通票不等于塞提一世等特别墓室票。同一人统一使用护照英文名，付款后保存PDF、二维码、订单号和取消条款，至少两台手机离线备份。官方支付失败时再用大型平台，不要从无资质个人处购买"免排队"门票。
+    </div>
+  </div>
+</section>
+
+<!-- 签证与入境 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🛂</span> 电子签证与入境流程</div>
+    <div class="section-desc">中国护照可办埃及电子签（eVisa），建议出发前2-4周完成。</div>
+    <div class="tip-box">
+      <strong>官方规则：</strong>单次旅游电子签证30美元；建议至少提前7天申请，为处理补件/支付问题，本行程建议出发前2-4周完成。护照自抵达埃及之日起至少有效6个月。
+    </div>
+    <table class="info-table">
+      <thead><tr><th>步骤</th><th>操作</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>进入埃及官方电子签门户（visa2egypt.gov.eg），切换中文，注册邮箱并验证账户</td></tr>
+        <tr><td>2</td><td>选择单次旅游签证，按护照资料逐字填写；姓名使用护照机读区拼音</td></tr>
+        <tr><td>3</td><td>上传清晰护照信息页，填写首晚酒店、抵离航班和行程</td></tr>
+        <tr><td>4</td><td>用支持境外支付的Visa/Mastercard付款30美元；保存支付凭证</td></tr>
+        <tr><td>5</td><td>收到批准邮件后登录账户下载，A4打印至少2份，手机另存PDF</td></tr>
+        <tr><td>6</td><td>抵达时向签证官出示纸质电子签、护照、返程票、酒店和行程单</td></tr>
+      </tbody>
+    </table>
+    <div class="overview-stats" style="margin-top:16px;">
+      <div class="stat-item"><div class="stat-num">$30</div><div class="stat-label">单次电子签费用</div></div>
+      <div class="stat-item"><div class="stat-num">2-4周</div><div class="stat-label">建议提前申请时间</div></div>
+      <div class="stat-item"><div class="stat-num">6个月</div><div class="stat-label">护照最低有效期</div></div>
+    </div>
+    <div class="tip-box" style="margin-top:12px;">
+      <strong>上海出发前证件袋：</strong>护照原件；电子签打印2份；国际往返与国内机票；全部酒店确认单；保险英文证明。一页英文行程摘要和首晚酒店电话；7人各存一份，领队另存云端。护照照片页/签证分别存于两台手机，不要只存在微信聊天记录。
+    </div>
+  </div>
+</section>
+
+<!-- 预算 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">💰</span> 预算估算（人均）</div>
+    <div class="section-desc">以下为参考预算，实际花费因住宿档次和消费习惯浮动。汇率：1元≈7埃镑，1美元≈35埃镑（2026年参考）。</div>
+    <div class="budget-total">
+      <div class="amount">¥13,000 — 16,000</div>
+      <div class="label">人均总预算（含国际+内陆机票，8天7晚）</div>
+    </div>
+    <table class="info-table">
+      <thead><tr><th>项目</th><th>明细</th><th>人均费用（约）</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr><td><strong>国际机票</strong></td><td>上海↔开罗往返（已订）</td><td class="price">¥5,000-7,000</td><td>中转机票</td></tr>
+        <tr><td><strong>内陆机票</strong></td><td>开罗→阿斯旺 + 赫尔格达→开罗</td><td class="price">¥2,098</td><td>招财组飞猪组合价；天哥组已出票</td></tr>
+        <tr><td><strong>签证</strong></td><td>电子签eVisa</td><td class="price">¥215（$30）</td><td>提前官网申请</td></tr>
+        <tr><td><strong>住宿</strong></td><td>6晚（开罗1+阿斯旺2+卢克索1+红海2）+天哥组机场1晚</td><td class="price">¥2,500-3,500</td><td>7人分摊，3-4间房；红海全包含三餐</td></tr>
+        <tr><td><strong>餐饮</strong></td><td>7天（红海2晚全包）</td><td class="price">¥500-800</td><td>埃及餐饮便宜</td></tr>
+        <tr><td><strong>门票</strong></td><td>金字塔+GEM+阿布辛贝+菲莱+帝王谷+卡纳克+卢克索神庙+城堡</td><td class="price">¥700-1,000</td><td>约10个景点，含可选特别展厅/墓室</td></tr>
+        <tr><td><strong>当地交通</strong></td><td>接机+开罗全天包车+3段长途包车+送机</td><td class="price">¥600-900</td><td>7人分摊包车费用</td></tr>
+        <tr><td><strong>活动体验</strong></td><td>Felucca帆船+红海浮潜船</td><td class="price">¥300-600</td><td>可选项目</td></tr>
+        <tr><td><strong>购物/伴手礼</strong></td><td>香料、椰枣、银饰、纸莎草画等</td><td class="price">¥500-1,000</td><td>因人而异</td></tr>
+        <tr><td><strong>小费/杂费</strong></td><td>埃及是小费国家</td><td class="price">¥200-300</td><td>餐厅10%、酒店、司机、导游等</td></tr>
+        <tr style="background:#E8F4FD !important;"><td><strong>总计</strong></td><td>—</td><td class="price"><strong>¥13,000-16,000</strong></td><td>人均全程</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box" style="margin-top:14px;">
+      <strong>建议带多少现金：</strong>美元备用现金USD 400-600（7人保管，不是全部预算）；首次换埃镑EGP 8,000-12,000合计（小费、小店、厕所、小额餐饮，不够再ATM/正规兑换）；至少2张不同银行Visa/Mastercard（酒店、航班、正规餐厅和官网，开境外支付）；额外USD 200或等值额度做紧急备用，与日常钱包分开。机场只换第一天够用的金额，拒绝街头换汇。刷卡选择EGP结算，拒绝商户动态货币转换DCC。
+    </div>
+  </div>
+</section>
+
+<!-- 行前准备 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🎒</span> 行前准备：衣物+药品+App+安全电话</div>
+    <div class="section-desc">9月底至10月初埃及炎热、干燥、日照强，南部白天更热，空调房和清晨有温差。</div>
+
+    <h4 style="color:var(--nile);margin-bottom:8px;font-size:1em;">📦 衣物与必带物品</h4>
+    <table class="info-table" style="margin-bottom:20px;">
+      <thead><tr><th>类别</th><th>清单</th></tr></thead>
+      <tbody>
+        <tr><td>证件</td><td>护照、eVisa纸质2份、保险、机票/酒店/司机确认单、证件照2张</td></tr>
+        <tr><td>上衣</td><td>宽松透气短袖 + 薄长袖；清真寺/老城过肩，不透视</td></tr>
+        <tr><td>下装</td><td>薄长裤/长裙为主；短裤仅酒店/红海度假区</td></tr>
+        <tr><td>鞋</td><td>已磨合防滑步行鞋 + 凉鞋/拖鞋 + 红海水鞋</td></tr>
+        <tr><td>女生</td><td>大号轻薄围巾、泳衣+罩衫、斜挎防盗包、生理用品</td></tr>
+        <tr><td>防晒</td><td>SPF50、帽子、UV墨镜、防晒唇膏、晒后修复</td></tr>
+        <tr><td>电子</td><td>欧标两圆孔转换头、充电宝、备用线、防水手机袋</td></tr>
+        <tr><td>舒适</td><td>颈枕、耳塞、眼罩、纸巾、湿巾、密封袋、小保温杯</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="color:var(--nile);margin-bottom:8px;font-size:1em;">💊 药品与健康</h4>
+    <table class="info-table" style="margin-bottom:20px;">
+      <thead><tr><th>类别</th><th>建议</th></tr></thead>
+      <tbody>
+        <tr><td>肠胃</td><td>口服补液盐、蒙脱石散/常用止泻药、益生菌；抗生素只按医生处方</td></tr>
+        <tr><td>发热疼痛</td><td>对乙酰氨基酚或本人常用退烧止痛药；注意成分重复</td></tr>
+        <tr><td>过敏</td><td>非嗜睡抗组胺药；有严重过敏史带医生要求的急救药</td></tr>
+        <tr><td>晕车/晕船</td><td>本人耐受的晕动药；上船前按说明服用，避免与酒精同用</td></tr>
+        <tr><td>外伤</td><td>创可贴、无菌纱布、消毒棉片、防磨脚贴</td></tr>
+        <tr><td>环境</td><td>防蚊液、人工泪液、润唇膏、补液电解质、口罩</td></tr>
+      </tbody>
+    </table>
+    <div class="warn-box" style="margin-bottom:20px;">
+      <strong>出现这些情况要就医：</strong>腹泻伴高烧、血便、持续呕吐、明显脱水（不要只靠止泻药硬撑）；中暑表现（意识异常、无法出汗、体温很高）立即降温并呼叫救护车123；潜水/浮潜后胸闷、呼吸困难、神经症状立即联系船方和保险救援。
+    </div>
+
+    <h4 style="color:var(--nile);margin-bottom:8px;font-size:1em;">📱 必备App</h4>
+    <table class="info-table" style="margin-bottom:20px;">
+      <thead><tr><th>App</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td>WhatsApp</td><td>司机、酒店、地接最常用；建7人+地接群</td></tr>
+        <tr><td>Google Translate / Microsoft Translator</td><td>下载中文-英文、中文-阿拉伯语离线包</td></tr>
+        <tr><td>Google Maps / MAPS.ME</td><td>离线保存酒店、机场、景点和使馆</td></tr>
+        <tr><td>Uber / Careem</td><td>开罗短途备选；核对车牌、司机和路线PIN</td></tr>
+        <tr><td>EgyptAir / Air Cairo</td><td>值机、延误、航站楼；同时保存网页订单</td></tr>
+        <tr><td>中国领事</td><td>海外安全提醒、领事服务；出发前完成注册</td></tr>
+        <tr><td>XE Currency</td><td>查汇率；商户刷卡坚持EGP结算</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="color:var(--nile);margin-bottom:8px;font-size:1em;">📞 安全电话（截图到每人手机首页）</h4>
+    <table class="info-table">
+      <thead><tr><th>机构</th><th>电话</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td>埃及警察</td><td><strong>122</strong></td><td>紧急治安事件</td></tr>
+        <tr><td>埃及救护车</td><td><strong>123</strong></td><td>医疗急救</td></tr>
+        <tr><td>埃及消防</td><td><strong>180</strong></td><td>火灾</td></tr>
+        <tr><td>旅游警察</td><td><strong>126</strong></td><td>旅游纠纷/景区协助</td></tr>
+        <tr><td>外交部全球领保</td><td>+86-10-12308 / +86-10-65612308</td><td>中国号码，可由家人协助</td></tr>
+        <tr><td>中国驻埃及使馆领保</td><td>+20-2-27363556</td><td>开罗；出发前再核对官网</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 埃及防骗秘籍 -->
+<section>
+  <div class="container">
+    <div class="section-title"><span class="icon">🛡️</span> 埃及防骗秘籍</div>
+    <div class="section-desc">埃及旅游常见套路与应对，提前知道少踩坑。记住核心原则：<strong>先问价、再消费；不跟陌生人走；小费自愿但合理；大额用平台/信用卡。</strong></div>
+
+    <div class="scam-grid">
+      <div class="scam-card">
+        <h4>🐫 金字塔骑骆驼/骑马套路</h4>
+        <div class="scam-desc">报价很低（如50埃镑），骑上去后中途加价，说"刚才只是上马费"，不给钱不让下来，或拉到远处要求高额"返程费"。</div>
+        <div class="scam-defense"><strong>应对：</strong>骑之前用手机/书面确认总价+货币+时长+上下马地点，写"all inclusive no extra fee"。不做长时间骆驼，园区内用用车更省心。遇到加价不要慌，说"之前已经谈好价格"，必要时找园区警察（旅游警察126）。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🤝 "热心人"主动带路/讲解/拍照</h4>
+        <div class="scam-desc">景点门口有人"好心"带你走捷径、帮你拍照、讲解，结束后索要高额小费（50-200埃镑），不给不让走。还有人冒充"博物馆工作人员"说今天闭馆，带你去"官方商店"。</div>
+        <div class="scam-defense"><strong>应对：</strong>不需要就直接说"No, thank you"并走开，不要眼神接触、不要接东西、不要让对方碰你的手机/相机。需要讲解找正规导游（有执照、穿制服、在官方导游亭）。任何"今天闭馆""跟我走"都是骗局，直接去官方入口确认。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🛒 哈利利市场强买强卖</h4>
+        <div class="scam-desc">摊主往你手里塞东西、喷香水、"免费"试戴，然后要求购买；报价虚高（实际价的3-5倍），不买不让走；用"朋友价""最后一天"等话术施压。</div>
+        <div class="scam-defense"><strong>应对：</strong>不接任何递过来的东西，不试不喷不戴。砍价从开价的1/3开始，最终约40-50%成交。不买就礼貌说"La shukran（不用，谢谢）"并离开，不要长时间讨价还价后不买。7人一起走，不要单独进入偏僻小店。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🚕 出租车/网约车宰客</h4>
+        <div class="scam-desc">机场出口拉客的黑车要价3-5倍；出租车不打表，到目的地后漫天要价；Uber/Careem司机要求取消线上支付改线下现金，然后加价。</div>
+        <div class="scam-defense"><strong>应对：</strong>机场用Uber/Careem或提前约好的接机，不要坐出口拉客的车。上车前确认打表（meter），不打表先谈价或换一辆。网约车坚持线上支付，司机要求取消改现金直接拒绝并可投诉。7人打两辆车或包商务车，上车前核对车牌和司机姓名。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🚗 包车临时加价/换车</h4>
+        <div class="scam-desc">包车出发后司机说"刚才价格不含高速费/停车费/司机餐"，要求额外加钱；阿布辛贝/长途路段临时换破车，或说"道路许可没办下来"要求加钱办许可。</div>
+        <div class="scam-defense"><strong>应对：</strong>订车时书面确认"all inclusive total price（含燃油、高速、停车、司机餐宿、许可、等候）"，用WhatsApp确认。通过酒店礼宾或持牌DMC订车，用信用卡/平台支付，不向陌生个人银行账户/微信私转100%全款。出发前24小时拿到车牌、司机电话、车辆照片。遇到临时加价不争吵，保留聊天记录，联系酒店/平台处理。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🎫 门票"免排队"黄牛</h4>
+        <div class="scam-desc">景点门口有人卖"免排队门票"或"官方导游票"，价格比官方高，实际是普通票或假票；说"金字塔内部票已经卖完"然后高价倒卖。</div>
+        <div class="scam-defense"><strong>应对：</strong>所有门票在官方窗口或官网（Egypt Monuments）购买，不从个人手中买"免排队"票。金字塔园区票不等于内部票，内部票在园区内官方窗口买，不会"卖完"。GEM提前官网预约时段。付款后保存PDF和二维码，两台手机备份。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>💱 换汇/刷卡套路</h4>
+        <div class="scam-desc">街头"换汇人"用高汇率吸引，实际给假钞/少给钱/调包；餐厅/商店刷卡时默认用美元结算（DCC动态货币转换），汇率很差；ATM被装盗刷装置。</div>
+        <div class="scam-defense"><strong>应对：</strong>只在机场银行柜台、正规银行ATM或正规兑换点换汇，拒绝街头换汇。刷卡时坚持用EGP（埃及镑）结算，拒绝DCC（屏幕上会问"用美元还是当地货币"，选当地货币）。ATM选择银行大堂内的机器，用手遮挡密码，卡不离开视线。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🏨 酒店"升级"与额外收费</h4>
+        <div class="scam-desc">入住时说"你订的房型没了，加钱升级"；全包酒店说"某些餐厅/酒水不包含"但预订时没说明；退房时说"迷你吧/SPA消费了"但实际没有。</div>
+        <div class="scam-defense"><strong>应对：</strong>预订时选可取消房型，邮件确认房型、餐饮计划（All Inclusive含什么写清楚）、安静区、同楼层。入住时检查房间，有问题立即前台反馈。全包酒店确认酒水、迷你吧、单点餐厅、SPA、水上活动是否包含（全包不等于全部免费）。退房时核对账单，不认可的消费当场提出。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🤿 红海浮潜/出海套路</h4>
+        <div class="scam-desc">街上拉客的"出海一日游"报价很低，实际是超载小船、无救生衣、去最差的潜点、强制给船员小费；说"含浮潜装备"实际装备破旧或另收费。</div>
+        <div class="scam-defense"><strong>应对：</strong>只通过酒店礼宾或持证潜水中心预订，不跟街上拉客的走。确认船型、载客量、救生衣、潜点数、是否含装备/饮料/午餐。出海前看天气和风浪，风浪大或有人晕船直接取消，安全第一。浮潜时穿救生衣，不单独游远，酒后不下水。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>💸 小费（Baksheesh）文化</h4>
+        <div class="scam-desc">埃及是小费国家，但有人把"小费"变成强制收费——洗手间递纸巾要20埃镑、酒店搬行李要100埃镑、景点"看墓人"堵在墓室门口要小费。</div>
+        <div class="scam-defense"><strong>应对：</strong>小费是自愿的，合理范围：餐厅10%、酒店行李员20-50埃镑/件、洗手间5-10埃镑、导游每天100-200埃镑（如果服务好）。准备小额埃镑零钱，不要给大额钞票让对方"找不开"。遇到堵门要小费的，说"已经付了门票"或给5-10埃镑礼貌离开，不要被施压。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>📱 手机/财物安全</h4>
+        <div class="scam-desc"> crowded景点有人故意碰撞然后偷手机/钱包；哈利利市场有人用"看这个"吸引注意力，同伙从背后掏兜；手机放桌上被顺手牵羊。</div>
+        <div class="scam-defense"><strong>应对：</strong>手机放前口袋或斜挎包（拉链朝前），不放后裤兜/外套外兜。钱包和护照分开放，护照放酒店保险箱，随身带复印件。7人互相照应，在拥挤景点（哈利利、金字塔入口）特别注意。吃饭时手机不放桌沿，包不挂椅背上。夜间哈利利市场4人以上同行，包和手机置于身体前侧。</div>
+      </div>
+
+      <div class="scam-card">
+        <h4>🗣️ 语言/沟通套路</h4>
+        <div class="scam-desc">有人用"你好""朋友"拉近距离，然后带你去"他朋友的店"，说"不买没关系就看看"，进去后被围堵消费；有人用"免费茶"招待，然后要高额"茶钱"。</div>
+        <div class="scam-defense"><strong>应对：</strong>友好但保持距离，不跟陌生人去任何店铺/茶馆/"捷径"。不接受免费的茶、咖啡、食物（接了就可能被要钱）。学会几句阿拉伯语："La shukran（不用谢谢）""Kam bi-sa?（多少钱？）""Kull fi al-si'ra?（包含全部吗？）"。遇到纠缠直接走向人多的地方或店铺，必要时找旅游警察126。</div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:20px;">
+      <strong>🛡️ 防骗核心口诀：</strong>不跟陌生人走、不接免费的东西、先问价再消费、大额用平台/信用卡、小费自愿但合理、7人一起不单独行动、遇到纠缠找警察（126旅游警察/122警察）。记住：在埃及，"免费"的往往是最贵的。
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>🇪🇬 <strong>埃及7人定制攻略</strong> | 招财组3人 + 天哥组4人 | 2026.9.29 - 10.6</p>
+    <p style="margin-top:8px;font-size:0.78em;">路线参考天哥组最终执行手册，呈现风格为定制优化版。景点门票/价格/政策可能变动，出发前请再次确认。祝旅途愉快！🏜️✨</p>
+  </div>
+</footer>
+
+</body>
+</html>
